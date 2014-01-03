@@ -7,15 +7,25 @@ EuroCMS
 Features
 =======
 
-None
+For the time being, **none**.
 
 
+Roadmap
+=======
+
+ - Dashboard
+ - Replacement for Google analytics(php!)
+ - EuroEditor (Inline/MD/source/preview)
+ - Add custom scripts/Functionality 
+ - High Level encryption 
+ - Image galley. At first powered by imgur. latter on a homemade one
 
 Dependencies
 =======
 
-
-Cheese sandwich
+ - php
+ - js(will rely mostly on php)
+ - Cheese sandwich
 
 
 Howto
