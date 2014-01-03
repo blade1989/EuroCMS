@@ -21,4 +21,4 @@ Cheese sandwich
 Howto
 =======
 
-Click 'work'
+Click `work`
