@@ -31,4 +31,6 @@ Dependencies
 Howto
 =======
 
-Click `work`
+Currently fiction:
+ 1. Extract in your server.
+ 2. Done.
