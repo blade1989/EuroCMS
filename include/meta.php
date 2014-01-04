@@ -1,3 +1,4 @@
+<?php defined('DS') OR die('No direct access allowed.');?>
 <div id="article-meta">
   by <a class="author" rel="author" title="author" href="/about" target="_blank"><?php $author ?></a> Posted 
   <!-- <b class="date" title="Sep. 2013">Sep. 2013</b>

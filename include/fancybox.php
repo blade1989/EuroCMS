@@ -1,5 +1,15 @@
-    <!-- Add jQuery library -->
-    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<?php defined('DS') OR die('No direct access allowed.');?>
+<!--   
+
+The entire fancybox will probably be rewriten. But, for now [on hold ] 
+- - - - - - - - - - - 
+
+Redundancy check.
+
+fancybox.js
+fancybox.css 
+
+-->
 
     <!-- Add mousewheel plugin (this is optional) -->
     <script type="text/javascript" src="/fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
@@ -15,3 +25,4 @@
 
     <link rel="stylesheet" href="/fancybox/source/helpers/jquery.fancybox-thumbs.css" type="text/css" media="screen">
     <script type="text/javascript" src="/fancybox/source/helpers/jquery.fancybox-thumbs.js"></script>
+    

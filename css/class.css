@@ -1,0 +1,102 @@
+/*
+-----------------------------------------------
+Author      :   Imri Paloja
+Email       :   imri.paloja@gmail.com
+HomePage    :   www.eurobytes.nl
+Version     :   0.1
+Name        :   EuroCMS
+
+CHANGED: Added to git
+
+----------------------------------------------- 
+*/
+
+
+/* Outdated Browser */
+#outdated {
+    background-color: #EEEEEE;
+    border-bottom: 1px solid #CCCCCC;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.25);
+    height: 130px;
+    list-style-type: none;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    padding-top: 15px;
+    position: fixed;
+    width: 100%;
+}
+
+
+#outdated li {
+    background-color: #F9F9F9;
+    border: 1px solid #CCCCCC;
+    float: left;
+    font-size: 12px;
+    height: 124px;
+    margin: 0 10px;
+    padding-left: 15px;
+    padding-top: 5px;
+    width: 250px;
+}
+
+#outdated li .description {
+  margin: 7px 0px 16px -10px;
+}
+
+.company {
+    float: right;
+    margin-left: 10px;
+    margin-top: -145px;
+    text-align: center;
+    width: 100px;
+}
+
+.company p {
+  margin-bottom: 0px;
+  margin-top: 0px;
+  text-align: center;
+  border-top: 1px solid #CCCCCC;
+}
+
+/* JavaScript not enabled */
+
+#nojs {
+    background-color: rgba(0, 0, 0, 0.75);
+    border-bottom: 1px solid #FFFFFF;
+    color: #FFFFFF;
+    float: left;
+    left: 0;
+    padding: 5px 0;
+    position: fixed;
+    right: 0;
+    text-align: center;
+    top: 0;
+    width: 100%;
+    z-index: 2147483647;
+}
+
+
+#headernav {
+    background-color: #F9F9F9;
+    border-bottom: 1px solid #CCCCCC;
+    height: 50px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+}
+
+#menuwrapper {
+    border: 1px solid #CCCCCC;
+}
+
+#headernav ul {
+    list-style-type: none;
+}
+
+#headernav ul li {
+    float: left;
+    padding: 2px 3px;
+    text-transform: uppercase;
+}

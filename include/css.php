@@ -1,4 +1,2 @@
-    <link rel="stylesheet" type="text/css" href="../css/class.css">
-    <link rel="stylesheet" type="text/css" href="../css/test.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="../css/responsive.css">
-    <link rel="stylesheet" type="text/css" href="../css/flexslider.css">
+<?php defined('DS') OR die('<h1>No direct access allowed.</h1>');?>
+    <link rel="stylesheet" type="text/css" href="/css/class.css">

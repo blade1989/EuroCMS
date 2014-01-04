@@ -1,4 +1,8 @@
-<?php include '../admin/admin.php'; ?>
+<?php include '../admin/admin.php'; 
+define('DS',  TRUE);
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,28 +28,21 @@
 
 <div id="wrap">
 
-<?php include './include/nav.php'; ?>
-
-
-<?php include './include/navwrapper.php'; ?>
-
-
 <div id="content">
 
-<?php include './include/flexslider.php'; ?>
-
-
-<?php include './include/aside.php'; ?>
+  <?php include './include/menu.php'; ?>
 
 <article>
 
-  <?php include '../include/meta.php'; ?>
+<?php //include './include/meta.php'; ?>
+
 
 <h1 class="header">EuroCMS</h1>
 
 <p id="intro">
   Welcome to the pre-alpha version of EuroCMS.
 </p>
+
 
 <p>
   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -105,7 +102,7 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 </div> <!-- content -->
 
-<?php include '../include/footer.php'; ?>
+<?php include './include/footer.php'; ?>
 
 </div> <!-- wrap -->
 
