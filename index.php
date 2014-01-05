@@ -1,6 +1,14 @@
 <?php include '../admin/admin.php'; 
-define('DS',  TRUE);
+session_start(); 
 
+define('DS',  TRUE); // used to protect includes
+define('USERNAME', $_SESSION['username']);
+define('SELF',  $_SERVER['PHP_SELF'] );
+
+if (!USERNAME or isset($_GET['logout']))
+ include('admin.php');
+
+// everything below will show after correct login 
 
 ?>
 <!DOCTYPE html>
@@ -8,6 +16,7 @@ define('DS',  TRUE);
 <head>
   <meta charset="utf-8">
   <title><?php $title ?> - <?php $sitename ?></title>
+  <link rel="stylesheet" type="text/css" href="/admin/admin-bar/admin-bar.css">
 <?php include './include/css.php'; ?>
 
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
@@ -57,12 +66,12 @@ define('DS',  TRUE);
 <h2>Lorem</h2>
 
 <p>
-<b>Lorem</b> ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud <a href="https://www.google.nl/" title="Google" target="_blank">exercitation</a> ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  <b>Lorem</b> ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+  quis nostrud <a href="https://www.google.nl/" title="Google" target="_blank">exercitation</a> ullamco laboris nisi ut aliquip ex ea commodo
+  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 </p>
 
 <a href="https://www.google.nl/" title="Google" target="_blank">
