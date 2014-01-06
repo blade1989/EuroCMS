@@ -20,13 +20,15 @@ $users = array(
 if(isset($_GET['logout'])) {
     $_SESSION['username'] = '';
     header('Location:  ' . $_SERVER['PHP_SELF']);
+    exit();
 }
 
 if(isset($_POST['username'])) {
     if($users[$_POST['username']] !== NULL && $users[$_POST['username']] == $_POST['password']) {
   $_SESSION['username'] = $_POST['username'];
   header('Location:  ' . $_SERVER['PHP_SELF']);
-    }else {
+     exit();
+   }else {
         //invalid login
   echo "<h1 id=loggon-err>Error Logging in</h1>";
     }
