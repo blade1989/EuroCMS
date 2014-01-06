@@ -31,6 +31,7 @@ Roadmap
  - Reference module.
   - makes a unique screenshot of a reference link. supports `id="intro"` and `#intro`.
   - favicon support
+ - revision controle.
 
 
 Plan of action
