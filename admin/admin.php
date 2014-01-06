@@ -7,6 +7,8 @@ Official php documentation:
 http://php.net/manual/en/faq.passwords.php
 
 
+look further in to this: http://www.openwall.com/phpass/
+
 $users = array(
  "$username" => "$password"
 );
