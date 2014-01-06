@@ -51,3 +51,13 @@ Howto
 Currently fiction:
  1. Extract in your server.
  2. Done.
+ 3. 
+ 
+Further reading
+======
+
+ - [9 Ways to Set Dynamic Body IDs via PHP and WordPress | Perishable Press  "9 Ways to Set Dynamic Body IDs via PHP and WordPress | Perishable Press"](http://perishablepress.com/dynamic-body-class-id-php-wordpress/) 
+
+
+
+
