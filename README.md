@@ -56,8 +56,7 @@ Currently fiction:
 Further reading
 ======
 
- - [9 Ways to Set Dynamic Body IDs via PHP and WordPress | Perishable Press  "9 Ways to Set Dynamic Body IDs via PHP and WordPress | Perishable Press"](http://perishablepress.com/dynamic-body-class-id-php-wordpress/) 
 
-
+ - [9 Ways to Set Dynamic Body IDs via PHP and WordPress | Perishable Press](http://perishablepress.com/dynamic-body-class-id-php-wordpress/ "9 Ways to Set Dynamic Body IDs via PHP and WordPress | Perishable Press").
 
 
