@@ -26,7 +26,13 @@ Roadmap
 Plan of action
 ======
 
- 1. Secure login
+ 1. css framework, css style.
+ 2. Secure login
+ 4. Dashboard
+ 5. EuroEditor
+ 6. A homemade server side analytics software.
+ 7. Sidebar for information about the current page
+ 8. code validator for js,php,css,html,(w3c and such). 
 
 
 Dependencies
