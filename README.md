@@ -32,7 +32,9 @@ Plan of action
  5. EuroEditor
  6. A homemade server side analytics software.
  7. Sidebar for information about the current page
- 8. code validator for js,php,css,html,(w3c and such). 
+ 8. code validator for js,php,css,html,(w3c and such).
+ 9. image gallery(imgur, later on, homemade.)
+ 10. customizable. 
 
 
 Dependencies
