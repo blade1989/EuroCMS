@@ -1,4 +1,8 @@
 <?php 
+
+// read this, before implementing further code:
+// http://security.stackexchange.com/questions/45034/how-to-secure-a-login-php-file
+//
 session_start(); 
 
 define('DS',  TRUE); // used to protect includes
