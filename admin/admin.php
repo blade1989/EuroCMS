@@ -7,7 +7,11 @@ Official php documentation:
 http://php.net/manual/en/faq.passwords.php
 
 
-look further in to this: http://www.openwall.com/phpass/
+look further in to these: 
+
+http://www.openwall.com/phpass/
+http://www.php.net/manual/en/function.password-hash.php
+
 
 $users = array(
  "$username" => "$password"
