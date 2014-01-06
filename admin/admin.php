@@ -6,6 +6,11 @@ Official php documentation:
 
 http://php.net/manual/en/faq.passwords.php
 
+
+$users = array(
+ "$username" => "$password"
+);
+
 */
 
 $users = array(
