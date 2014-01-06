@@ -13,6 +13,8 @@ For the time being, **none**.
 Roadmap
 =======
 
+ - Hased passwords
+ - Hased articles
  - Dashboard
  - Replacement for Google analytics(php!)
  - EuroEditor (Inline/MD/source/preview)
