@@ -1,6 +1,12 @@
 <?php defined('DS') OR die('No direct access allowed.');
 
-/* Actual username and password. Need to hash them. */
+/* Actual username and password. Need to hash them. 
+
+Official php documentation:
+
+http://php.net/manual/en/faq.passwords.php
+
+*/
 
 $users = array(
  "username" => "password"
