@@ -22,6 +22,13 @@ Roadmap
  - High Level encryption 
  - Image galley. At first powered by imgur. latter on a homemade one
 
+
+Plan of action
+======
+
+ 1. Secure login
+
+
 Dependencies
 =======
 
