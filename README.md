@@ -51,8 +51,7 @@ Howto
 Currently fiction:
  1. Extract in your server.
  2. Done.
- 3. 
- 
+
 Further reading
 ======
 
