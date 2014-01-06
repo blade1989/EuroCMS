@@ -21,7 +21,9 @@ Roadmap
  - Add custom scripts/Functionality 
  - High Level encryption 
  - Image galley. At first powered by imgur. latter on a homemade one
- - `themes` folder. for all of your themes
+ - `themes` folder.
+ - EuroEditor - `smileys` for smileys(that will automatically appear in the `smiley's tab in the editor`)
+ - EuroEditor - `custom` folders. For some custom functionality.
 
 
 Plan of action
