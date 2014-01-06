@@ -1,0 +1,11 @@
+input {
+    border: 1px solid #CCCCCC
+}
+
+#ee {
+    border: 1px solid #CCCCCC;
+    padding: 5px;
+    background-color: #FFFFFF;
+    width: 95%;
+    height: 225px;
+}

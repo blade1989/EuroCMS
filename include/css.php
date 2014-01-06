@@ -1,2 +1,3 @@
-<?php defined('DS') OR die('<h1>No direct access allowed.</h1>');?>
+<?php //defined('DS') OR die('<h1>No direct access allowed.</h1>');?>
     <link rel="stylesheet" type="text/css" href="/css/class.css">
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
