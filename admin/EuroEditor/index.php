@@ -47,25 +47,28 @@
 <br>
 <br>
 
+<article>
+
 <form action="new.php" method="post" id="eeform">
 
-<textarea name="editor" id="ee">
-	&lt;p class=&quot;intro&quot;&gt;Intro.&lt;/p&gt;
-</textarea>
+	<textarea name="editor" id="ee">
+		&lt;p class=&quot;intro&quot;&gt;Intro.&lt;/p&gt;
+	</textarea>
 
 
-<input type="file" name="file" value="file" placeholder="file"><br><br>
+	<input type="file" name="file" value="file" placeholder="file"><br><br>
 
-<input type="image" name="image" value="image" placeholder="image"><br><br>
+	<input type="image" name="image" value="image" placeholder="image"><br><br>
 
-<input type="reset" name="reset" value="reset"><br><br>
+	<input type="reset" name="reset" value="reset"><br><br>
 
-<input type="submit" name="submit" value="submit">
+	<input type="submit" name="submit" value="submit">
 
 
     </form>
 
 
+</article>
 
 </div>
 
