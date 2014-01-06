@@ -21,9 +21,13 @@ Roadmap
  - Add custom scripts/Functionality 
  - High Level encryption 
  - Image galley. At first powered by imgur. latter on a homemade one
+ - Spelling feature
  - `themes` folder.
  - EuroEditor - `smileys` for smileys(that will automatically appear in the `smiley's tab in the editor`)
  - EuroEditor - `custom` folders. For some custom functionality.
+ - Reference module.
+  - makes a unique screenshot of a reference link. supports `id` and `#intro`.
+  - favicon support
 
 
 Plan of action
