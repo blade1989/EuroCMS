@@ -32,6 +32,8 @@ Roadmap
   - makes a unique screenshot of a reference link. supports `id="intro"` and `#intro`.
   - favicon support
  - revision controle.
+ - pollyfiles where needed:
+  -[What is a pulyfill?] (http://remysharp.com/2010/10/08/what-is-a-polyfill/ "What is a Polyfill?")
 
 
 Plan of action
