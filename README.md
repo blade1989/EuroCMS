@@ -40,8 +40,11 @@ Plan of action
 ======
 
  1. CSS framework, css style.
-  - ~~Reasonably stable~~ **check**
-  - Deeper testing - Ongoing
+  - css framework
+    - ~~Reasonably stable~~ **check**
+    - Deeper testing - Ongoing
+  - css style
+    - visual glitches when being responsive
  2. Secure login
  4. Dashboard
  5. EuroEditor
