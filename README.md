@@ -29,17 +29,17 @@ Roadmap
  - Country support. 
  - Multy language articles
  - Reference module.
-  - makes a unique screenshot of a reference link. supports `http://example.com/article#intro`.
-  - favicon support
- - revision controle.
- - pollyfiles where needed:
+  - Makes a unique screenshot of a reference link. supports `http://example.com/article#intro`.
+  - Favicon support
+ - Revision controle.
+ - Pollyfiles where needed:
   - [What is a pulyfill?] (http://remysharp.com/2010/10/08/what-is-a-polyfill/ "What is a Polyfill?")
 
 
 Plan of action
 ======
 
- 1. css framework, css style.
+ 1. CSS framework, css style.
   - ~~Reasonably stable~~ **check**
   - Deeper testing - Ongoing
  2. Secure login
@@ -47,16 +47,16 @@ Plan of action
  5. EuroEditor
  6. A homemade server side analytics software.
  7. Sidebar for information about the current page
- 8. code validator for js, php, css, html,(w3c and such).
- 9. image gallery(imgur, later on, homemade.)
- 10. customizable. 
+ 8. Code validator for js, php, css, html,(w3c and such).
+ 9. Image gallery(imgur, later on, homemade.)
+ 10. Customizable. 
 
 
 Dependencies
 =======
 
- - php
- - js(will rely mostly on php)
+ - PHP
+ - JS(will rely mostly on php)
  - Cheese sandwich
 
 
