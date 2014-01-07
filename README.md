@@ -10,7 +10,7 @@ Features
 For the time being, **none**.
 
 
-Roadmap
+Future functionalities
 =======
 
  - Hased passwords
@@ -36,7 +36,7 @@ Roadmap
   - [What is a pulyfill?] (http://remysharp.com/2010/10/08/what-is-a-polyfill/ "What is a Polyfill?")
 
 
-Plan of action
+Current roadmap
 ======
 
  1. CSS framework, css style.
