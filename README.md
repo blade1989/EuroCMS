@@ -80,9 +80,32 @@ looking at this one:
 **But**, not yet implemented.
 
 
+Currently on the:
+
+**No License**
 
 
-Further reading
+Required
+
+    License and copyright notice
+
+Permitted
+
+    Commercial Use
+    Private Use
+
+Forbidden
+
+    Distribution
+    Modification
+    Sublicensing
+
+
+
+
+
+
+Links
 ======
 
 
