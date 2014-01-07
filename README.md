@@ -29,7 +29,7 @@ Roadmap
  - Country support. 
  - Multy language articles
  - Reference module.
-  - makes a unique screenshot of a reference link. supports `id="intro"` and `#intro`.
+  - makes a unique screenshot of a reference link. supports `http://example.com/article#intro`.
   - favicon support
  - revision controle.
  - pollyfiles where needed:
