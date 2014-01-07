@@ -70,6 +70,18 @@ Currently fiction:
  1. Extract in your server.
  2. Done.
 
+Licensing
+=======
+
+looking at this one:
+
+[Affero GPL ] (http://choosealicense.com/licenses/agpl/)
+
+**But**, not yet implemented.
+
+
+
+
 Further reading
 ======
 
