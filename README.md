@@ -75,7 +75,7 @@ Licensing
 
 looking at this one:
 
-[Affero GPL ] (http://choosealicense.com/licenses/agpl/)
+[Affero GPL ] (http://www.gnu.org/licenses/agpl-3.0.txt)
 
 **But**, not yet implemented.
 
