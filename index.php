@@ -25,7 +25,11 @@ if (!USERNAME or isset($_GET['logout']))
 
 <?php include './include/fancybox.php'; ?>
 
-<?php include './include/ie.php'; ?>
+<!--[if lt IE 7]> 
+  <?php include './include/ie7.php'; ?>
+<![endif]--> 
+
+
 
   <!-- disable iPhone inital scale -->
   <meta name="viewport" content="width=device-width; initial-scale=1.0">
@@ -208,8 +212,6 @@ if (!USERNAME or isset($_GET['logout']))
 
 
 </article>
-
-<?php include './include/comment.php';  ?>
 
 <div id="np">
 
