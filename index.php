@@ -25,8 +25,25 @@ if (!USERNAME or isset($_GET['logout']))
 
 <?php include './include/fancybox.php'; ?>
 
+
+
+<?php
+    $user_agent_data = strtolower($_SERVER['HTTP_USER_AGENT']);
+
+if(ereg("msie 6.0", $user_agent_data))
+
+{
+
+    include("include/ie7.php");
+
+    exit;
+
+}
+?>
+
+
 <!--[if lt IE 7]> 
-  <?php include './include/ie7.php'; ?>
+  <?php // include './include/ie7.php'; ?>
 <![endif]--> 
 
 
