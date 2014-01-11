@@ -9,6 +9,24 @@ Features
 
 For the time being, **none**.
 
+Current roadmap
+======
+
+ 1. CSS framework, css style.
+  - css framework
+    - ~~Reasonably stable~~ **check**
+    - ~~Deeper testing~~ - **check**
+  - css style
+    - visual glitches when being responsive
+ 2. Secure login
+ 4. Dashboard
+ 5. EuroEditor
+ 6. A homemade server side analytics software.
+ 7. Sidebar for information about the current page
+ 8. Code validator for js, php, css, html,(w3c and such).
+ 9. Image gallery(imgur, later on, homemade.)
+ 10. Customizable. 
+
 
 Future functionalities
 =======
@@ -34,26 +52,6 @@ Future functionalities
  - Revision controle.
  - Pollyfiles where needed:
   - [What is a pulyfill?] (http://remysharp.com/2010/10/08/what-is-a-polyfill/ "What is a Polyfill?")
-
-
-Current roadmap
-======
-
- 1. CSS framework, css style.
-  - css framework
-    - ~~Reasonably stable~~ **check**
-    - Deeper testing - Ongoing
-  - css style
-    - visual glitches when being responsive
- 2. Secure login
- 4. Dashboard
- 5. EuroEditor
- 6. A homemade server side analytics software.
- 7. Sidebar for information about the current page
- 8. Code validator for js, php, css, html,(w3c and such).
- 9. Image gallery(imgur, later on, homemade.)
- 10. Customizable. 
-
 
 Dependencies
 =======
