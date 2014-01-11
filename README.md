@@ -18,7 +18,7 @@ Current roadmap
     - ~~Deeper testing~~ - **check**
   - css style
     - visual glitches when being responsive
-    - Final test off CSS framework, and style
+    - Final testing: CSS framework, and style
  2. Secure login
  4. Dashboard
  5. EuroEditor
