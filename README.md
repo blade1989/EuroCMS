@@ -20,6 +20,7 @@ Current roadmap
     - visual glitches when being responsive
     - Final testing: CSS framework, and style
  2. Secure login
+ 3. Variables, and such.
  4. Dashboard
  5. EuroEditor
  6. A homemade server side analytics software.
