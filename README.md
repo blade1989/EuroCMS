@@ -53,7 +53,7 @@ Future functionalities
   - Favicon support
  - Revision controle.
  - Polyfill where needed:
-  - [What is a pulyfill?] (http://remysharp.com/2010/10/08/what-is-a-polyfill/ "What is a Polyfill?")
+  - [What is a Polyfill?] (http://remysharp.com/2010/10/08/what-is-a-polyfill/ "What is a Polyfill?")
 
 Dependencies
 =======
