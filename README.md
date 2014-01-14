@@ -52,7 +52,7 @@ Future functionalities
   - Makes a unique screenshot of a reference link. supports `http://example.com/article#intro`.
   - Favicon support
  - Revision controle.
- - Pollyfiles where needed:
+ - Polyfill where needed:
   - [What is a pulyfill?] (http://remysharp.com/2010/10/08/what-is-a-polyfill/ "What is a Polyfill?")
 
 Dependencies
