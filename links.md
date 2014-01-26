@@ -20,5 +20,4 @@ Links
 ## Further reading
 
  - [Mozilla CSS Extensions - CSS | MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Mozilla_Extensions)
- - [](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Webkit_Extensions)
  - [WebKit extensions - CSS | MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Webkit_Extensions)
