@@ -11,6 +11,7 @@ Links
  - [fleXcroll: Cross Browser Custom ScrollBar script by Hesido](http://www.hesido.com/web.php?page=customscrollbar)
  - [41 Websites Every Java Developer Should Bookmark](http://www.cygnet-infotech.com/41-websites-every-java-developer-should-bookmark) 
   - when one needs Java
+ - [Web | Ubuntu Developer](http://developer.ubuntu.com/web/) Ubuntu unity's webapps
 
 
 
