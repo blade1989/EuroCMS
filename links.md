@@ -9,6 +9,10 @@ Links
  - [9 Ways to Set Dynamic Body IDs via PHP and WordPress | Perishable Press](http://perishablepress.com/dynamic-body-class-id-php-wordpress/).
  - [5 Easy Ways to Display Syntax Highlighted PHP Code](http://perishablepress.com/5-easy-ways-to-display-syntax-highlighted-php-code/)
  - [fleXcroll: Cross Browser Custom ScrollBar script by Hesido](http://www.hesido.com/web.php?page=customscrollbar)
+ - [41 Websites Every Java Developer Should Bookmark](http://www.cygnet-infotech.com/41-websites-every-java-developer-should-bookmark) 
+  - when one needs Java
+
+
 
 ## Privacy and Security
 
