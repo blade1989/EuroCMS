@@ -17,7 +17,7 @@ Links
 
 ## Privacy and Security
 
-
+ - [Privacy &amp; Security - EuroBytes](http://www.eurobytes.nl/tutorials/privacy-and-security)
 
  - [Is it bad practice to use your real name online?](http://security.stackexchange.com/questions/46569/is-it-bad-practice-to-use-your-real-name-online)
 
@@ -26,3 +26,11 @@ Links
 
  - [Mozilla CSS Extensions - CSS | MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Mozilla_Extensions)
  - [WebKit extensions - CSS | MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Webkit_Extensions)
+
+
+## EuroEditor
+
+ - [fernapp](http://www.fernapp.com/)
+ - [LibreOffice developer shows prototype Android and HTML5 ports | Ars Technica](http://arstechnica.com/business/2012/02/libreoffice-developer-shows-prototype-android-and-html5-ports/)
+
+ - 
