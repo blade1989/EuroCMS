@@ -33,3 +33,20 @@ Links
  - [fernapp](http://www.fernapp.com/)
  - [LibreOffice developer shows prototype Android and HTML5 ports | Ars Technica](http://arstechnica.com/business/2012/02/libreoffice-developer-shows-prototype-android-and-html5-ports/)
 
+## Programming languages 
+
+ - PHP, server side scripting language:
+  - [PHP: Hypertext Preprocessor](http://php.net/)
+  - [w3schools.com: PHP 5 Tutorial](http://www.w3schools.com/php/default.asp)
+  - [PHP Programming - Wikibooks, open books for an open world](http://en.wikibooks.org/wiki/PHP_Programming)
+ - JavaScript
+  - [w3schools.com: JavaScript Tutorial](http://www.w3schools.com/js/default.asp)
+  - [JavaScript - Wikibooks, open books for an open world](http://en.wikibooks.org/wiki/JavaScript)
+ 
+
+
+
+
+
+
+
