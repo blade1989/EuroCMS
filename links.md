@@ -11,8 +11,9 @@ Links
  - [fleXcroll: Cross Browser Custom ScrollBar script by Hesido](http://www.hesido.com/web.php?page=customscrollbar)
  - [41 Websites Every Java Developer Should Bookmark](http://www.cygnet-infotech.com/41-websites-every-java-developer-should-bookmark) 
   - when one needs Java
- - [Ubuntu unity's webapps](http://developer.ubuntu.com/web/) 
-
+ - [Ubuntu unity's webapps](http://developer.ubuntu.com/web/)
+ - [jQuery UI](http://jqueryui.com/)
+  - Allot of them can make it to EuroCMS
 
 
 ## Privacy and Security
