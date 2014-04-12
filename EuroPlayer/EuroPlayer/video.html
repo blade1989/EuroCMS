@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>EuroBytes - by Imri Paloja</title>
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+	<meta name="description" content="EuroBytes by Imri Paloja">
+	<meta name="author" content="Imri Paloja">
+
+  <link rel="stylesheet" type="text/css" href="video.css">
+  <script type="text/javascript" src="video.js"></script>
+
+</head>
+
+<body>
+
+<h1>HTML5 Video Events and API</h1>
+
+  <div>
+    <video id='video' poster="http://media.w3.org/2010/05/sintel/poster.png">
+      <source id='mp4' src="http://media.w3.org/2010/05/sintel/trailer.mp4" type='video/mp4'>
+      <source id='webm' src="http://media.w3.org/2010/05/sintel/trailer.webm" type='video/webm'>
+      <source id='ogv' src="http://media.w3.org/2010/05/sintel/trailer.ogv" type='video/ogg'>
+
+      <p>Your user agent does not support the HTML5 Video element.</p>
+    </video>
+    
+    <div id="buttons">
+      <button onclick="document._video.load()">load</button>
+      <button onclick="document._video.play()">play</button>
+      <button onclick="document._video.pause()">pause</button>
+      <button onclick="document._video.currentTime+=10">currentTime+=10</button>
+      <button onclick="document._video.currentTime-=10">currentTime-=10</button>
+      <button onclick="document._video.currentTime=50">currentTime=50</button><br>
+      <button onclick="document._video.playbackRate++">playbackRate++</button>
+      <button onclick="document._video.playbackRate--">playbackRate--</button>
+      <button onclick="document._video.playbackRate+=0.1">playbackRate+=0.1</button>
+      <button onclick="document._video.playbackRate-=0.1">playbackRate-=0.1</button><br>
+      <button onclick="document._video.volume+=0.1">volume+=0.1</button>
+      <button onclick="document._video.volume-=0.1">volume-=0.1</button>
+      <button onclick="document._video.muted=true">muted=true</button>
+      <button onclick="document._video.muted=false">muted=false</button><br>
+      <button onclick="switchVideo(0);">Sintel teaser</button>
+      <button onclick="switchVideo(1);">Bunny trailer</button>
+      <button onclick="switchVideo(2);">Bunny movie</button>
+      <button onclick="switchVideo(3);">Test movie</button>
+    </div>
+
+<hr>
+
+<h2>Reference</h2>
+
+<a href="http://www.w3.org/2010/05/video/mediaevents.html" title="mediaevents">HTML5 Video Events and API</a>
+
+</body>
+</html> 

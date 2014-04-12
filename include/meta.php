@@ -22,8 +22,7 @@
     <li id="linkedin"><script src="//platform.linkedin.com/in.js" type="text/javascript"></script>
       <script type="IN/Share" data-counter="right"></script>
     </li>
-<!--     <li id="reddit"><script type="text/javascript" src="http://nl.reddit.com/static/button/button1.js"></script> </a>
- -->
+
   </ul>
 
 </div>

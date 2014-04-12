@@ -1,0 +1,16 @@
+
+EuroEditor
+======
+
+A mark down editor for the [Eurobytes](http://www.eurobytes.nl/ " Eurobytes") website including the current [html5 beta](http://www.eurobytes.nl/html5 "Password protected")
+ and [EuroCMS](https://github.com/blade1989/EuroCMS "GitHub"). 
+
+
+
+![favicon] [1]
+
+
+----------
+so am just testing this out
+
+  [1]: http://www.eurobytes.nl/favicon.ico

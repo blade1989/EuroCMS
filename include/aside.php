@@ -1,3 +1,5 @@
+<?php defined('DS') OR die('No direct access allowed.');?>
+
 <aside>
 
 <a id="goTop"><code>^</code></a>

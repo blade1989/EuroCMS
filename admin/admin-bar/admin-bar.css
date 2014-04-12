@@ -6,6 +6,33 @@
 	border-bottom: 1px solid #CCCCCC;
 }
 
+#admin-bar-menu #logo {
+    background-image: url("http://www.eurobytes.nl/favicon.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border: 1px solid #CCCCCC;
+    border: medium none;
+    float: left;
+    margin-right: 0px;
+    padding: 5px 5px 5px 40px;
+    cursor: pointer;
+}
+
+#admin-bar-menu #logo:hover {
+    background-color: #CC0000;
+
+}
+
+#admin-bar-menu #logo a:hover {
+    background-color: transparent;
+
+}
+
+#admin-bar-menu #logo a {
+    margin: 0px;
+}
+
+
 #home {
 	color: #454545;
 	margin-top: -28px;
@@ -16,27 +43,37 @@
 
 #admin-bar-menu {
     background-color: #FFFFFF;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
     box-shadow: 2px 4px 2px rgba(0, 0, 0, 0.3);
-    left: 0;
-    list-style-type: none;
-    margin: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
+    height: 34px;
+    /*margin-top: 78px;*/
+    position: relative;
     width: 100%;
-    z-index: 2147483647;
+}
+
+#admin-bar-menu li {
+    border-left: 1px solid #CCCCCC;
+    float: left;
+    list-style-type: none;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 5px 1%;
+    text-transform: uppercase;
+}
+
+#admin-bar-menu li:hover, #admin-bar-menu a:hover {
+    background-color: #3465A4;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+#admin-bar-menu li a {
+    margin: -10px -10px 0;
+    padding: 10px 10px 8px;
 }
 
 
-#admin-bar-menu li {
-    float: left;
-    list-style-type: none;
-    margin-left: 1%;
-    margin-right: 0;
-    text-transform: uppercase;
-    border-left: 1px solid #CCCCCC;
-    padding: 5px;
+#admin-bar-menu li:hover a{
+    color: #FFFFFF;
 }
 
 #logout-image {

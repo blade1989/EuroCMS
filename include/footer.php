@@ -3,7 +3,9 @@
 <div id="license">
 
 <p>
-  <a href="https://plus.google.com/+ImriPaloja/posts" rel="author" title="Author">Imri Paloja</a>
+	<i>
+  		<a href="https://plus.google.com/+ImriPaloja/posts" rel="author" title="Author">Imri Paloja</a>
+	</i>
 </p>
 
 </div>
