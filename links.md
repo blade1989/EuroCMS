@@ -14,6 +14,7 @@ Links
  - [Ubuntu unity's webapps](http://developer.ubuntu.com/web/)
  - [jQuery UI](http://jqueryui.com/)
   - Allot of them can make it to EuroCMS
+ - [jQuery.mmenu, app look-alike menus with sliding submenus](http://mmenu.frebsite.nl/)
 
 
 ## Privacy and Security
