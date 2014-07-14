@@ -33,6 +33,8 @@ Links
 
  - [fernapp](http://www.fernapp.com/)
  - [LibreOffice developer shows prototype Android and HTML5 ports | Ars Technica](http://arstechnica.com/business/2012/02/libreoffice-developer-shows-prototype-android-and-html5-ports/)
+ - [HTMLHint](http://htmlhint.com/)
+ 	- [yaniswang/HTMLHint](https://github.com/yaniswang/HTMLHint)
 
 ## Programming languages 
 

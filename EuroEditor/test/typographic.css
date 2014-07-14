@@ -1,0 +1,72 @@
+/* <head>
+<title>www.thebrentc.net - typographic style</title>
+<meta name="content-type" content="text/css; charset=iso-8859-1" />
+<meta name="author" content="thebrentc@gmail.com" />
+<meta name="copyright" content="CC BY SA" />
+<meta name="reply-to" content="thebrentc@gmail.com" />
+<meta name="language" content="en-gb" />
+<meta name="description" content = "Good typography style sheet" />
+<meta name="note" content = "" />
+<meta name="dependecies" content="" />
+<meta name="reference" content = "http://www.markboulton.co.uk/journal/comments/five-simple-steps-to-better-typography" />
+</head>
+*/
+
+body
+{	
+	/* measure */ 
+	/*
+    -moz-column-width: 45em;  
+    -webkit-column-width: 45em;  
+	column-width: 45em;  	
+	*/
+/*
+    -moz-column-count: 2;  
+    -webkit-column-count: 2;  
+	column-count: 2;  		
+    -moz-column-gap: 10em;  
+    -webkit-column-gap: 10em;  	
+*/
+	
+	/* leading */
+	line-height: 2em;
+	
+	/* white space */
+	padding-left: 10%; 	
+	padding-right: 10%;	
+}	
+
+/* hanging lists and punctuation */
+p { margin-left: 1.5em; }
+
+
+/* ligatures  */
+/* automatic */
+
+body {
+font: 1.5em "Lucida Grande";
+}
+
+h1, h2, h3, h4, h5, h6 {
+font-family: helvetica, arial, verdana, sans-serif;
+font-weight: normal;
+}
+
+h1 {
+font-size: 218%;
+}
+
+h2 {
+font-size: 164%;
+}
+
+h3 {
+font-size: 145%;
+}
+
+h4 {
+font-size: 118%;
+}
+
+/* type weight */
+/* http://www.markboulton.co.uk/journal/comments/five-simple-steps-to-better-typography-part-5 */

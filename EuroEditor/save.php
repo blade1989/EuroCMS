@@ -15,13 +15,13 @@ if (!USERNAME or isset($_GET['logout']))
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Admin - EuroCMS</title>
+  <title><?php echo $_POST["header"]; ?> - EuroBytes</title>
   <link rel="stylesheet" type="text/css" href="/admin/admin-bar/admin-bar.css">
 <?php include '../include/css.php'; ?>
 
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-    <meta name="description" content="<?php echo "$description"; ?>">
-    <meta name="author" content="<?php "$author"; ?>">
+    <meta name="description" content="<?php echo $_POST["description"]; ?>">
+    <meta name="author" content="<?php echo $_POST["author"]; ?>">
 
 <?php include '../include/fancybox.php'; ?>
 
@@ -44,53 +44,78 @@ if(ereg("msie 6.0", $user_agent_data)) {
 
 <body>
 
-
-
-
   <?php include '../include/menu.php'; ?>
 
 <div id="wrap">
 
 <div id="content">
 
-<article>
-<div class="article-meta">
-  by <a class="author" rel="author" title="author" href="/about" target="_blank">Imri Paloja</a> Posted 
+  <article>
 
-   <time datetime="2013-05" title="May. 2013">May. 2013</time>
+
+<div class="article-meta">
+   <span class="author" rel="author" title="author" href="/about" target="_blank"><?php echo $_POST["author"]; ?></span> 
+
+   <time datetime="<?php echo $_POST["datetime"]; ?>" title="<?php echo $_POST["datetime"]; ?>"><?php echo $_POST["datetime"]; ?></time>
+
+</div> 
+
+<h1><?php echo $_POST["header"]; ?></h1>
+
+  <?php echo $_POST["description"]; ?>
+
+<br>
+
+    <div class="tags" style="font-size:12px;border-top:1px solid #CCCCCC; margin:-5px;padding:5px;">
+
+      <span style="border-right:1px solid #CCCCCC;padding:8px;margin:8px;"> <?php echo $_POST["tag1"]; ?> </span>
+      <span style="border-right:1px solid #CCCCCC;padding:8px;margin:8px;"> <?php echo $_POST["tag2"]; ?> </span>
+      <span style="border-right:1px solid #CCCCCC;padding:8px;margin:8px;"> <?php echo $_POST["tag3"]; ?> </span>
+
+    </div>  
+
+</article>
+
+<div style="border:1px solid #CCCCCC;background-color:#EEEEEE;padding:5px;">
+
+<!-- 
+
+It's working!
+ -->
+
+<?php
+  $myfile = fopen("newfile.txt", "w") or die("Unable to open file!");
+
+
+  $txt = $_POST["author"];
+  fwrite($myfile, $txt);
+
+  $txt = $_POST["datetime"];
+  fwrite($myfile, $txt);
+
+  $txt = $_POST["header"];
+  fwrite($myfile, $txt);
+
+  $txt = $_POST["description"];
+  fwrite($myfile, $txt);
+
+
+
+  fclose($myfile);
+
+
+
+
+  // $myfile = fopen("newfile.txt", "w") or die("Unable to open file!");
+  // $txt = $_POST["header"];
+  // fwrite($myfile, $txt);
+  // fclose($myfile);
+?> 
+
 
 </div>
 
 
-
-
-<?php
-
-if (!empty($_POST))
-{
-	foreach ( $_POST as $key => $value )
-	{
-		if ( ( !is_string($value) && !is_numeric($value) ) || !is_string($key) )
-			continue;
-
-?>
-		<?php //echo htmlspecialchars( (string)$key ); ?>
-			<?php echo "$value"; ?>
-
-<!-- 	<hr><b title="author"><?php //echo "$author"; ?></b>
-
-		<h1 class="header" title="header"><?php // echo "$header"; ?></h1>
-
-			<p id="intro"  title="description">
-				<?php //echo "$description"; ?>
-			</p> -->
-
-	<?php
-	}
-}
-?>
-
-</article>
 
 </div> <!-- content -->
 

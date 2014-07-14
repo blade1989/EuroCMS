@@ -21,6 +21,6 @@ if ($zip->open("help.zip")===TRUE){
 	<hr>
 
 <h2>Reference</h2>
-<a href="https://www.youtube.com/watch?v=aCyWNmeq97A#t=203">Working with Zip(Compressing and Extracting) in PHP </a>
+<a href="https://www.youtube.com/watch?v=aCyWNmeq97A#t=203">Working with Zip(Compressing and Extracting) in PHP</a>
 </body>
 </html>

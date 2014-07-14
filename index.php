@@ -23,7 +23,7 @@ if (!USERNAME or isset($_GET['logout']))
     <meta name="description" content="<?php $description ?>">
     <meta name="author" content="<?php $author ?>">
 
-<?php include './include/fancybox.php'; ?>
+<?php //include './include/fancybox.php'; ?>
 
 <?php
     $user_agent_data = strtolower($_SERVER['HTTP_USER_AGENT']);
@@ -38,46 +38,9 @@ if(ereg("msie 6.0", $user_agent_data)) {
 
   <!-- disable iPhone inital scale -->
   <meta name="viewport" content="width=device-width; initial-scale=1.0">
-    <?php include './include/js.php'; ?>
+  
+  <?php include './include/js.php'; ?>
 
-<!-- KeyBoard test -->
-
-  <!--<link href="http://code.jquery.com/ui/1.9.0/themes/ui-darkness/jquery-ui.css" rel="stylesheet">-->
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.js"></script>
-  <script src="http://code.jquery.com/ui/1.9.0/jquery-ui.min.js"></script>
-
-<link rel="stylesheet" href="/admin/modules/keyboard/Keyboard-master/css/keyboard.css">
-<script src="/admin/modules/keyboard/Keyboard-master/js/jquery.keyboard.js"></script>
-
-<script src="/admin/modules/keyboard/Keyboard-master/js/jquery.keyboard.extension-mobile.js"></script>
-
-<script src="/admin/modules/keyboard/Keyboard-master/js/jquery.keyboard.extension-typing.js"></script>
-
-  <script>
-    $(function(){
-      $('#keyboard').keyboard();
-    });
-  </script>
-
-<script>
-// Typing Extension
-$('#icon').click(function() {
-    var kb = $('#keyboard').getkeyboard();
-    // typeIn( text, delay, callback );
-    kb.reveal().typeIn(simulateTyping, 500, function() {
-        // do something after text is added
-        // kb.accept();
-    });
-});
-</script>
-
-
-<style>
-  #icon {
-   width: 25px;
-   margin-bottom: -3px; 
-  }
-</style>
 
 </head>
 
@@ -159,15 +122,20 @@ $('#icon').click(function() {
   Welcome to the <b>pre</b>-<b>alpha</b> version of EuroCMS. <strong>Your free, easy to use, and customizable Content Management System</strong>
 </p>
 
-<form style="margin: 0px auto;">
-  
-    <input id="keyboard" type="text">
-        <img id="icon" src="http://mottie.github.com/Keyboard/demo/keyboard.png" style="width: 25px;">
+<h2>Editor</h2>
 
-</form>
+<!-- <iframe style="border: 0 none; height: 345px; max-height: 100%; min-height: 275px; width: 100%;overflow:hidden;"
+src="EuroEditor/html5/inline.php">
+</iframe> -->
+
+<iframe style="border: 0 none; height: 345px; max-height: 100%; min-height: 275px; width: 100%;overflow:hidden;"
+src="EuroEditor/markdown/md.php">
+</iframe>
 
 
-
+<p>
+  <b>This is very <u>alpha!</u></b> don't run it on a <mark>production server</mark>! Best to run it on a machine which you don not care if a re install is needed.  
+</p>
 
 
 
