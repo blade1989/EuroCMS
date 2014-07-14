@@ -16,6 +16,7 @@ Links
   - Allot of them can make it to EuroCMS
  - [jQuery.mmenu, app look-alike menus with sliding submenus](http://mmenu.frebsite.nl/)
  - [fullPage.js One Page Scroll Site Plugin](http://alvarotrigo.com/fullPage/)
+ - [UICorner-User interface design resources,articles and tutorials](http://www.uicorner.com/)
 
 
 ## Privacy and Security
