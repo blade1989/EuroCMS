@@ -49,7 +49,10 @@ Links
  - JavaScript
   - [w3schools.com: JavaScript Tutorial](http://www.w3schools.com/js/default.asp)
   - [JavaScript - Wikibooks, open books for an open world](http://en.wikibooks.org/wiki/JavaScript)
- 
+ - jquery
+  - [jQuery](http://jquery.com/)
+  - [jQuery Tutorial](http://www.w3schools.com/jquery/default.asp)
+  - [jQuery Learning Center](http://learn.jquery.com/)
 
 
 
