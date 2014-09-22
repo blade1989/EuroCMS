@@ -18,6 +18,7 @@ Links
  - [fullPage.js One Page Scroll Site Plugin](http://alvarotrigo.com/fullPage/)
  - [UICorner-User interface design resources,articles and tutorials](http://www.uicorner.com/)
  - [Automatically generate a Table of Contents using PHP  - 10stripe](http://www.10stripe.com/articles/automatically-generate-table-of-contents-php.php)
+ - [Dynamic Drive DHTML Scripts- Style Sheet Switcher (v1.1)](http://www.dynamicdrive.com/dynamicindex9/stylesheetswitcher.htm)
 
 
 ## Privacy and Security
