@@ -128,14 +128,6 @@ mark {
     color: black
 }
 
-i {
-	font-style: italic;
-}
-
-em {
-    font-style: italic;
-} 
-
 hr {
 	border: 1px solid #CCCCCC;
 	display: block;
@@ -221,8 +213,9 @@ cite:after {
 }
 
 video {
-    margin: 0 auto 0 175px;
+    margin: 20px 250px 20px 175px;
     width: 450px;
+    height: 250px;
 }
 
 img {
@@ -294,6 +287,12 @@ input[type=submit],input[type=reset],input[type=button],button {
 	text-align:center;
 	padding: 0px 3px;
 	margin: 5px 0px;
+}
+
+
+input[type="color"] {
+    margin: 0;
+    padding: 0;
 }
 
 input[type=submit]:hover,input[type=reset]:hover,input[type=button]:hover,button:hover {
