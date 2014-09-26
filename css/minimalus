@@ -1,0 +1,332 @@
+html, body {
+	background-color: #FFFFFF;
+	width: auto;
+	max-width: 100%;
+	min-width: 0%;
+	height: auto;
+	max-height: 100%;
+	min-height: 0%;
+}
+
+a, abbr, acronym, address, applet, area, article, aside, audio, b, 
+base, basefont, bdi, bdo, big, blockquote, body, br, button, canvas, 
+caption, center, cite, code, col, colgroup, datalist, dd, del, details, 
+dfn, dialog, dir, div, dl, dt, em, embed, fieldset, figcaption, 
+figure, font, footer, form, frame, frameset, head, header, h1, h2, 
+h3, h4, h5, h6, hr, html, i, iframe, img, input, ins, kbd, keygen, 
+label, legend, li, link, main, map, mark, menu, meta, meter, nav,
+noframes, noscript, object, ol, optgroup, option, output, p, param,
+ pre, progress, q, rp, rt, ruby, s, samp, script, section, select, 
+ small, source, span, strike, strong, style, sub, summary, sup, 
+ table, tbody, td, textarea, tfoot, th, thead, time, title, tr, 
+ track, tt, u, ul, var, video, wbr {
+	border: 0 none;
+	color: #454545;
+	font-family: Serif;
+	font-size: 100%;
+	font-size-adjust: inherit;
+	font-stretch: inherit;
+	font-style: inherit;
+	font-variant: inherit;
+	font-weight: inherit;
+	text-indent: 0;
+	letter-spacing: 0;
+	line-height:1.5em;
+	vertical-align: baseline;
+	margin: 0;
+	padding: 0;
+	word-spacing: normal;
+}
+
+article, aside, bdi, details, dialog, img figcaption, figure, footer, header, main, menuitem, meter, nav, progress, rp, rt, ruby, section, summary, time, wbr {
+	display: block;
+}
+
+article {
+	border: 1px solid #CCCCCC;
+	background-color: #F9F9F9;
+	margin: 20px auto;
+	padding: 25px;
+	width: 850px;
+	max-width: 100%;
+	min-width: 25%;
+	height: auto;
+	max-height: 100%;
+	min-height: 0%;
+	
+}
+
+
+h1 {
+	font-size: 190%;
+	margin-top: 0;
+}
+
+h2 {
+	font-size: 160%;
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+
+h3 {
+	font-size: 120%;
+}
+
+h4 {
+	font-size: 100%;
+}
+
+h5 {
+	font-size: 90%;
+}
+
+h6 {
+	font-size: 80%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	background-color: transparent;
+	color: #454545;
+	font-weight: 900;
+	margin: 1%;
+	text-align: ce
+}
+
+h2, h3, h4, h5, h6 {
+	border-bottom: 1px solid #454545;
+}
+
+
+/*
+Testing stuff out per this article
+
+http://sixrevisions.com/web_design/white-space/
+
+*/
+p {
+    font-size: 16px;
+    line-height: 24px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+/* Not sure... */
+
+
+
+/*p {
+	font-size: 15px;
+	margin: 1%;
+}*/
+
+b, strong {
+	font-size: 100%;
+	font-weight: bolder;
+}
+
+mark {
+    background: none repeat scroll 0 0 yellow;
+    color: black
+}
+
+i {
+	font-style: italic;
+}
+
+em {
+    font-style: italic;
+} 
+
+hr {
+	border: 1px solid #CCCCCC;
+	display: block;
+	margin: 20px 0px 20px 0px;
+}
+
+sub {
+    font-size: smaller;
+    line-height: normal;
+    vertical-align: sub;
+}
+
+sup {
+    font-size: smaller;
+    line-height: normal;
+    vertical-align: super;
+}
+
+u, ins {
+    text-decoration: underline;
+}
+
+s, strike, del {
+    text-decoration: line-through;
+}
+
+abbr[title], acronym[title] {
+    border-bottom: 1px dotted;
+}
+
+tt, code, kbd, samp {
+    font-family: monospace;
+}
+
+i, cite, em, var, dfn {
+    font-style: italic;
+}
+
+code {
+    background-color: #cccccc;
+    border: 1px solid #cccccc;
+    font-size: 12px;
+    padding: 0 5px;
+}
+
+blockquote {
+    background-color: #eeeeee;
+    border-bottom: 1px solid #cccccc;
+    border-top: 1px solid #cccccc;
+    margin: 20px 20px 20px -25px;
+    padding: 2px 25px;
+    width: 100%;
+}
+
+blockquote:before {
+	content: open-quote;
+	font-size: 25px;
+	float: left;
+	margin-left: -15px;
+
+}
+
+blockquote:after {
+	content: close-quote;
+	font-size: 25px;
+	float: right;
+	margin-right: 0px;
+}
+
+cite {
+	font-style: italic;
+}
+
+cite:before {
+	content: open-quote;
+	font-size: 25px;
+
+}
+
+cite:after {
+	content: close-quote;
+	font-size: 25px;
+}
+
+video {
+    margin: 0 auto 0 175px;
+    width: 450px;
+}
+
+img {
+	margin: 20px auto;
+}
+
+/* ^ Text  ^*/
+
+ul {
+	padding: 2px 25px;
+}
+
+small {
+    font-size: smaller;
+}
+
+input {
+    background-color: #EEEEEE;
+    background-image: none;
+    border: 1px solid #cccccc;
+    margin: 2px 0;
+    padding: 0 3px;
+}
+
+input[type=checkbox] {
+	-moz-border-radius: 0;
+	-webkit-border-radius: 0;
+	-moz-appearance: checkbox;
+	-webkit-appearance: checkbox;
+	outline: checkbox;
+	border-radius:0 0 0 0;
+	background:linear-gradient(tobottom,#FFFFFF,#F9F9F9) repeat scroll 0 0 rgba(0,0,0,0);
+	border:1px solid rgba(0,0,0,0.25);
+	cursor:pointer;
+	color: #454545;
+	display: inline-block;
+	padding:0 3px;
+}
+
+input[type=submit],input[type=reset],input[type=button],button {
+	-moz-border-radius:0;
+	-webkit-border-radius:0;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	outline:none;
+	border-radius:0 0 0 0;
+	background:linear-gradient(tobottom,#FFFFFF,#F9F9F9) repeat scroll 0 0 rgba(0,0,0,0);
+	border:1px solid rgba(0,0,0,0.25);
+	cursor:pointer;
+	color:#454545;
+	text-align:center;
+	padding: 0px 3px;
+	margin: 5px 0px;
+}
+
+input[type=submit]:hover,input[type=reset]:hover,input[type=button]:hover,button:hover {
+	box-shadow:0 1px 2px rgba(30,25,25,0.2);
+	background:linear-gradient(tobottom,#F9F9F9,#FFFFFF) repeat scroll 0 0 rgba(0,0,0,0.75);
+
+}
+
+textarea {
+	border:1px solid rgba(0,0,0,0.25);
+	box-shadow:0 0 2px 0 rgba(0,0,0,0.25) inset;
+	padding:5px;
+}
+
+textarea:hover {
+	border:1px solid rgba(0,0,0,0.75);
+}
+
+textarea:active, textarea:focus {
+	border:1px solid #CCCCCC;
+
+}
+
+input[type=radio] {
+    border: 1px solid #CCCCCC;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-appearance: radio;
+    -webkit-appearance: radio;
+    outline: none;
+    border-radius: 0 0 0 0;
+    background: linear-gradient(tobottom,#FFFFFF,#F9F9F9) repeat scroll 0 0 rgba(0,0,0,0);
+    border: 1px solid rgba(0,0,0,0.25);
+    cursor: pointer;
+    color: #454545;
+    text-align: center;
+    padding: 0 3px;
+}
+
+input[type="radio"]:checked + label {
+    color: #ffffff;
+}
+
+footer {
+	border-top: 1px solid #CCCCCC;
+	background-color: #F9F9F9;
+	position: relative;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	text-align: center;
+}
