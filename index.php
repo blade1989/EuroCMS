@@ -11,146 +11,259 @@ if (!USERNAME or isset($_GET['logout']))
 // everything below will show after correct login 
 
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Admin - EuroCMS</title>
-  <link rel="stylesheet" type="text/css" href="/admin/admin-bar/admin-bar.css">
-<?php include './include/css.php'; ?>
-
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-    <meta name="description" content="<?php $description ?>">
-    <meta name="author" content="<?php $author ?>">
-
-<?php //include './include/fancybox.php'; ?>
-
 <?php
-    $user_agent_data = strtolower($_SERVER['HTTP_USER_AGENT']);
-
-if(ereg("msie 6.0", $user_agent_data)) {
-
-    include("include/ie7.php");
-
-    exit;
-}
+echo "<!DOCTYPE html>\n";
+//include('defines.php');
+include('define.php');
 ?>
+<?php
 
-  <!-- disable iPhone inital scale -->
-  <meta name="viewport" content="width=device-width; initial-scale=1.0">
-  
-  <?php include './include/js.php'; ?>
+//echo '<!--';
 
+//echo "Your os is:";
 
+/*echo os_info("$uagent");
+
+echo("\n\n") ;
+
+print( $ua['name']);*/
+/*echo $_SERVER['HTTP_USER_AGENT'] . "\n\n";
+
+$browser = get_browser(null, true);
+print_r($browser);*/
+
+//echo '-->';
+
+//echo os_info("$uagent");
+
+?>
+<?php
+
+$keywords = "CMS, FOSS, Cool";
+echo "
+<html lang=\"en\">
+<head>
+  <title>$sitename - $siteintro</title>
+    <link rel=\"stylesheet\" type=\"text/css\" href=\"$framworkcss\">
+    <link rel=\"stylesheet\" type=\"text/css\" href=\"stylesheets.php\">
+    <link rel=\"shortcut icon\" href=\"/favicon.ico\" type=\"image/x-icon\">
+    <meta name=\"description\" content=\"Free tutorials, as in free speech, not free beer.\">
+    <meta name=\"keywords\" content=\"$keywords\">
+    <meta name=\"author\" content=\"$author\">
 </head>
-
 <body>
+  $adminlink
 
-  <?php include './include/menu.php'; ?>
-
-<div id="wrap">
-
-<aside>
-
-<div>
-  <b>Latest Articles</b>
-     <hr>
-    <ul>
-      <li>
-        <a href="#" title="Article name1">Nagios or Icinga</a>
-      </li>  
-      <li>
-        <a href="#" title="Article name2">0 A.D. Alpha 14 Naukratis</a>
-      </li>  
-      <li>
-        <a href="#" title="Article name3">Privacy &amp; Security</a>
-      </li>  
-      <li>
-        <a href="#" title="Article name4">Native Viber for Linux</a>
-      </li>   
-      <li>
-        <a href="#" title="Article name5">League of Legends under Ubuntu</a>
-      </li>  
-    </ul> 
-</div>
-  
-
-<div>
-  <b>Analytics</b>
-    <hr>
-
-<p>
-  Most viewed pages
-</p>
-
-    <ol>
-      <li>
-        <a href="#" title="Article name1">Nagios or Icinga</a>
-      </li>  
-      <li>
-        <a href="#" title="Article name2">0 A.D. Alpha 14 Naukratis</a>
-      </li>  
-      <li>
-        <a href="#" title="Article name3">Privacy &amp; Security</a>
-      </li>  
-      <li>
-        <a href="#" title="Article name4">Native Viber for Linux</a>
-      </li>   
-      <li>
-        <a href="#" title="Article name5">League of Legends under Ubuntu</a>
-      </li> 
-    </ol>
-
-</div>
-  
-  <div id="recentcomments" class="dsq-widget align">
-
-  <b class ="dsq-widget-title">Recent comments</b>
-  <script type="text/javascript" src="http://eurobytes.disqus.com/recent_comments_widget.js?num_items=5&amp;hide_avatars=0&amp;avatar_size=32&amp;excerpt_length=200"></script>
-   
-  </div>
-</aside>
-
-
-<div id="content">
+  <p>
+    $intro
+  </p>
 
 <article>
 
-<h1 class="header">EuroCMS</h1>
+<h1 class=\"header\">EuroCMS</h1>
 
-<p id="intro">
-  Welcome to the <b>pre</b>-<b>alpha</b> version of EuroCMS. <strong>Your free, easy to use, and customizable Content Management System</strong>
+<p id=\"intro\">
+  Welcome to the <b>pre-alpha</b> version of EuroCMS: <strong>Your free, easy to use, and customizable Content Management System</strong>
 </p>
 
-<h2>Editor</h2>
+<br>
 
-<!-- <iframe style="border: 0 none; height: 345px; max-height: 100%; min-height: 275px; width: 100%;overflow:hidden;"
-src="EuroEditor/html5/inline.php">
-</iframe> -->
+<hr>
+<p>
+  <b>This is ALPHA software! Meaning an unfinished product!</b> 
+</p>
 
-<iframe style="border: 0 none; height: 345px; max-height: 100%; min-height: 275px; width: 100%;overflow:hidden;"
-src="EuroEditor/markdown/md.php">
-</iframe>
 
+<h2>Current parts</h2>
+
+<ul>
+  <li>framework.css</li>
+  <li>framework.js</li>
+</ul>
+
+
+<h2>README.MD</h2>
+
+<h2>Features</h2>
 
 <p>
-  <b>This is very <u>alpha!</u></b> don't run it on a <mark>production server</mark>! Best to run it on a machine which you don not care if a re install is needed.  
+  For the time being, 
+  <b>none</b>.
 </p>
 
+<h2>Current roadmap</h2>
 
+<ol>
+  <li>CSS framework, css style.</li>
+  <li>css framework</li>
+  <ul>
+    <li>
+      <s>Reasonably stable</s> <b>check</b></li>
+    <li>
+      <s>Deeper testing</s> - <b>check</b></li>
+  </ul>
+  <li>- css style</li>
+  <ol>
+    <li>visual glitches when being responsive</li>
+    <li>Final testing: CSS framework, and style</li>
+  </ol> 
+  <li>framework.js </li>
+  <ol>
+    <li>Polyfils</li>
+    <li>Convergence</li>
+  </ol>  
+ <li>Secure login</li>
+ <li>Variables, and such.</li>
+ <li>Dashboard</li>
+ <li>EuroEditor</li>
+ <li>A homemade server side analytics software.</li>
+ <li>Sidebar for information about the current page</li>
+ <li>Code validator for js, php, css, html,(w3c and such).</li>
+ <li>Image gallery(imgur, later on, homemade.)</li>
+ <li>Customizable.</li>
+</ol>
+
+<h2>Future functionalities</h2>
+
+<ul>
+ <li>Hased passwords</li>
+ <li>Hased articles</li>
+ <li>Dashboard</li>
+ <li>Replacement for Google analytics(php!)</li>
+ <li>EuroEditor (Inline/MD/source/preview)</li>
+ <li>Add custom scripts/Functionality </li>
+ <li>High Level encryption </li>
+ <li>Image galley. At first powered by imgur. latter on a homemade one</li>
+ <li>Spelling feature</li>
+ <li><cite>themes</cite> folder.</li>
+ <li>EuroEditor - <cite>smileys</cite> for smileys(that will automatically appear in the `smiley's tab in the editor`)</li>
+ <li>EuroEditor - <cite>custom</cite> folders. For some custom functionality.</li>
+ <li>Advanced search engine.</li>
+ <li>Country support. </li>
+ <li>Multy language articles</li>
+ <li>Reference module.</li>
+    <ul>
+      <li>Makes a unique screenshot of a reference link. supports `http://example.com/article#intro`.</li>
+      <li>Favicon support</li>
+    </ul>
+  <li> Revision controle.</li>
+  <li> Polyfill where needed:</li>
+  <li><a href=\"http://remysharp.com/2010/10/08/what-is-a-polyfill/\" title=\"\">What is a Polyfill?</a></li>
+</ul>
+
+<h2>Dependencies</h2>
+
+
+<ul>
+  <li>PHP</li>
+  <li>JS(will rely mostly on php)</li>
+  <li>Cheese sandwich</li>
+</ul>
+
+
+<h2>Howto</h2>
+
+<b>Currently fiction:</b>
+
+<ol>
+  <li>Extract in your server.</li>
+  <li>Done.</li>
+</ol>
+
+<h2>Licensing </h2>
+
+<p>
+  looking at this one: <a href=\"http://www.gnu.org/licenses/agpl-3.0.txt\">Affero GPL</a>. 
+  <b>But</b>, not yet implemented. Currently on the:
+</p>
+
+<h3>
+  No License
+</h3>
+
+<ul>
+  <li>Required</li>
+  <ul>
+    <li>License and copyright notice</li>
+  </ul>
+    <li>Permitted</li>
+    <ul>
+      <li>Commercial Use</li>
+      <li>Private Use</li>
+    </ul>
+      <li>Forbidden</li>
+    <ul>
+      <li>Distribution</li>
+      <li>Modification</li>
+      <li>Sublicensing</li>
+    </ul>
+</ul>
+
+<h2>links.md</h2>
+
+<h1>Links</h1>
+<h2>Interesting features</h2>
+<ul>
+<li>
+<p><a href=\"http://www.elated.com/articles/add-article-categories-to-your-cms/\">How to Add Article Categories to Your CMS</a></p>
+</li>
+<li>
+<p><a href=\"http://perishablepress.com/dynamic-body-class-id-php-wordpress/\">9 Ways to Set Dynamic Body IDs via PHP and WordPress | Perishable Press</a>.</p>
+</li>
+<li><a href=\"http://perishablepress.com/5-easy-ways-to-display-syntax-highlighted-php-code/\">5 Easy Ways to Display Syntax Highlighted PHP Code</a></li>
+<li><a href=\"http://www.hesido.com/web.php?page=customscrollbar\">fleXcroll: Cross Browser Custom ScrollBar script by Hesido</a></li>
+<li><a href=\"http://www.cygnet-infotech.com/41-websites-every-java-developer-should-bookmark\">41 Websites Every Java Developer Should Bookmark</a> </li>
+<li>when one needs Java</li>
+<li><a href=\"http://developer.ubuntu.com/web/\">Ubuntu unity's webapps</a></li>
+<li><a href=\"http://jqueryui.com/\">jQuery UI</a></li>
+<li>Allot of them can make it to EuroCMS</li>
+<li><a href=\"http://mmenu.frebsite.nl/\">jQuery.mmenu, app look-alike menus with sliding submenus</a></li>
+<li><a href=\"http://alvarotrigo.com/fullPage/\">fullPage.js One Page Scroll Site Plugin</a></li>
+<li><a href=\"http://www.uicorner.com/\">UICorner-User interface design resources,articles and tutorials</a></li>
+<li><a href=\"http://www.10stripe.com/articles/automatically-generate-table-of-contents-php.php\">Automatically generate a Table of Contents using PHP  - 10stripe</a></li>
+</ul>
+
+<h2>Privacy and Security</h2>
+<ul>
+  <li>
+  <p><a href=\"http://www.eurobytes.nl/tutorials/privacy-and-security\">Privacy &amp; Security - EuroBytes</a></p>
+  </li>
+  <li>
+  <p><a href=\"http://security.stackexchange.com/questions/46569/is-it-bad-practice-to-use-your-real-name-online\">Is it bad practice to use your real name online?</a></p>
+  </li>
+</ul>
+
+<h2>CSS</h2>
+<ul>
+  <li><a href=\"https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Mozilla_Extensions\">Mozilla CSS Extensions - CSS | MDN</a></li>
+  <li><a href=\"https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Webkit_Extensions\">WebKit extensions - CSS | MDN</a></li>
+</ul>
+
+<h2>EuroEditor</h2>
+<ul>
+  <li><a href=\"http://www.fernapp.com/\">fernapp</a></li>
+  <li><a href=\"http://arstechnica.com/business/2012/02/libreoffice-developer-shows-prototype-android-and-html5-ports/\">LibreOffice developer shows prototype Android and HTML5 ports | Ars Technica</a></li>
+  <li><a href=\"http://htmlhint.com/\">HTMLHint</a><ul>
+  <li><a href=\"https://github.com/yaniswang/HTMLHint\">yaniswang/HTMLHint</a></li>
+  </ul>
+  </li>
+</ul>
+
+<h2>Programming languages</h2>
+<ul>
+  <li>PHP, server side scripting language:</li>
+  <li><a href=\"http://php.net/\">PHP: Hypertext Preprocessor</a></li>
+  <li><a href=\"http://www.w3schools.com/php/default.asp\">w3schools.com: PHP 5 Tutorial</a></li>
+  <li><a href=\"http://en.wikibooks.org/wiki/PHP_Programming\">PHP Programming - Wikibooks, open books for an open world</a></li>
+  <li>JavaScript</li>
+  <li><a href=\"http://www.w3schools.com/js/default.asp\">w3schools.com: JavaScript Tutorial</a></li>
+  <li><a href=\"http://en.wikibooks.org/wiki/JavaScript\">JavaScript - Wikibooks, open books for an open world</a></li>
+</ul>
 
 
 </article>
 
-</div> <!-- content -->
-
-<div style="    display: inline-block;
-    visibility: hidden;
-    width: 100%;height: 450px;"></div>
-
-<?php include './include/footer.php'; ?>
-
-</div> <!-- wrap -->
-
 </body>
-</html>
+</html>";
+
+?>

@@ -1,4 +1,0 @@
-<span target="_blank" href="/about" title="author" rel="author" class="author">blade1989</span>
-<time title="04/06/2014" datetime="04/06/2014">04/06/2014</time>
-<h1>steam for Linux</h1>
-

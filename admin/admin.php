@@ -45,7 +45,7 @@ echo '<!DOCTYPE html>
 <head>
 <title><?php $title ?> - <?php $sitename ?></title>
 
-<?php include './include/css.php'; ?>
+<?php include \'./include/css.php\'; ?>
 
 <link rel="stylesheet" type="text/css" href="css/admin.css">
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
@@ -55,11 +55,11 @@ echo '<!DOCTYPE html>
 <meta name="author" content="<?php $author ?>" >
 <meta charset="utf-8">
 
-<?php include './include/fancybox.php'; ?>
+<?php include \'./include/fancybox.php\'; ?>
 
-<?php include './include/ie.php'; ?>
+<?php include \'./include/ie.php\'; ?>
 
-<?php include './include/js.php'; ?>
+<?php include \'./include/js.php\'; ?>
 
 </head>
 
@@ -67,8 +67,8 @@ echo '<!DOCTYPE html>
 
 <fieldset id="loginform">
 <legend>
-  <a href="/images/corneillie-black-red.jpg" title="<?php $author ?>">
-<img src="/images/corneillie-black-red.jpg" alt="<?php $author ?>" style="width:300px;height:250px;border:2px outset #CCCCCC;"></a>
+  <a href="/images/corneillie-black-red.jpg" title="$author">
+<img src="/images/corneillie-black-red.jpg" alt="$author" style="width:300px;height:250px;border:2px outset #CCCCCC;"></a>
 </legend>
 
  <a href="http://www.eurobytes.nl/" title="Homepage" style="
