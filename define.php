@@ -102,7 +102,7 @@ echo "\n\n-->";
 
     $framworkcss    = "http://framework/framework.css";
     $author         = "Imri Paloja";
-    $adminlink      = "<a href=\"/admin/index.php#formpost\" class=\"fancybox fancybox.iframe\" id=\"logon\">LOGIN</a>";
+    $adminlink      = "<a href=\"/admin/index.php#formpost\" class=\"fancybox fancybox.iframe\" id=\"logon\" style=\"position: absolute;top:0px; right:0px;\">LOGIN</a>";
     $sitename       = "EuroCMS";
     $siteintro      = "Your free, easy to use, and customizable Content Management System";
    

@@ -54,15 +54,13 @@ echo "
 <body>
   $adminlink
 
-  <p>
-    $intro
-  </p>
 
+<div id=\"wrap\">
 <article>
 
-<h1 class=\"header\">EuroCMS</h1>
+<h1 class=\"header\" style=\" text-align: center;\">EuroCMS</h1>
 
-<p id=\"intro\">
+<p id=\"intro\" style=\" text-align: center;\">
   Welcome to the <b>pre-alpha</b> version of EuroCMS: <strong>Your free, easy to use, and customizable Content Management System</strong>
 </p>
 
@@ -263,6 +261,8 @@ echo "
 
 </article>
 
+
+</div> <!--  wrap -->
 </body>
 </html>";
 

@@ -4,8 +4,6 @@
 	$url_color = "#3465A4";
 	$body_html_background_color = "#F9F9F9"
 
-
-
 ?>
 
 a {
@@ -18,10 +16,22 @@ body,html {
 	background-color: <?php echo "$body_html_background_color";?>;	
 }
 
-<?php
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
 
-	echo "$get_html_tags";
+#wrap {
+	margin: 20px auto;
+	width: 80%;
+}
 
+article {
+	border: 1px solid #CCCCCC;
+	background-color: #FFFFFF;
+	padding: 25px;
+}
 
 
 ?>
