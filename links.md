@@ -20,6 +20,9 @@ Links
  - [Automatically generate a Table of Contents using PHP  - 10stripe](http://www.10stripe.com/articles/automatically-generate-table-of-contents-php.php)
  - [Dynamic Drive DHTML Scripts- Style Sheet Switcher (v1.1)](http://www.dynamicdrive.com/dynamicindex9/stylesheetswitcher.htm)
  - [wkhtmltopdf](http://wkhtmltopdf.org/)
+ - [Downloads | CSS-Tricks](http://css-tricks.com/downloads/)
+  - Enough scripts to last you a life time. 
+ - [\[brothercake\] CSSUtilities](http://www.brothercake.com/site/resources/scripts/cssutilities/)
 
 
 ## Privacy and Security
