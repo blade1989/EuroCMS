@@ -5,6 +5,8 @@ EuroCMS
 
 ---
 
+Howto
+=======
 
 Currently fiction:
  1. Extract in your server.
