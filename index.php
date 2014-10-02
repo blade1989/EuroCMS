@@ -37,8 +37,26 @@ print_r($browser);*/
 //echo os_info("$uagent");
 
 ?>
-<?php
 
+<?php
+// foreach ($nodes as $node) {
+
+//     // skip html and body
+//     if($node->nodeName === 'html' or $node->nodeName === 'body') {
+//         continue;
+//     }
+
+//     // insert everything else
+//     $names[] = $node->nodeName;
+// }
+
+// $css = 'color:red;';
+
+// echo join(', ', array_unique($names)) . " {\n" . $css . "\n}\n";
+
+?>
+
+<?php
 $keywords = "CMS, FOSS, Cool";
 echo "
 <html lang=\"en\">

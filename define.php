@@ -101,10 +101,26 @@ echo "\n\n-->";
     // Some variables 
 
     $framworkcss    = "http://framework/framework.css";
-    $author         = "Imri Paloja";
     $adminlink      = "<a href=\"/admin/index.php#formpost\" class=\"fancybox fancybox.iframe\" id=\"logon\" style=\"position: absolute;top:0px; right:0px;\">LOGIN</a>";
-    $sitename       = "EuroCMS";
-    $siteintro      = "Your free, easy to use, and customizable Content Management System";
-   
+//    $sitename       = "EuroCMS";
+//    $siteintro      = "Your free, easy to use, and customizable Content Management System";
+
+    // The site template
+    $eurotemplate = "<html lang=\"en\">
+<head>
+  <title>$sitename - $siteintro</title>
+    <link rel=\"stylesheet\" type=\"text/css\" href=\"$framworkcss\">
+    <link rel=\"stylesheet\" type=\"text/css\" href=\"stylesheets.php\">
+    <link rel=\"shortcut icon\" href=\"/favicon.ico\" type=\"image/x-icon\">
+    <meta name=\"description\" content=\"Free tutorials, as in free speech, not free beer.\">
+    <meta name=\"keywords\" content=\"$keywords\">
+    <meta name=\"author\" content=\"$author\">
+</head>
+<body>
+  $adminlink
+
+<div id=\"wrap\">
+<article>
+";
 
 ?>
