@@ -30,16 +30,36 @@ $nodes = $xpath->query('//*');
 
 foreach ($nodes as $node) {
 
-    // skip html and body
-    if($node->nodeName === 'html' or $node->nodeName === 'body') {
-        continue;
+    // skip html and body - disabled
+    if($node->nodeName === 'head' or $node->nodeName === 'meta' or $node->nodeName === 'title' or $node->nodeName === 'link' or $node->nodeName === 'style' or $node->nodeName === 'script') {        
+    	continue;
     }
 
     // insert everything else
     $names[] = $node->nodeName;
 }
 
-$css = '	color:#454545;';
+$css = '	
+    -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box; 
+    box-sizing: border-box;
+    color: #454545;
+    border: 0 none;
+    font-family: "Times New Roman",Georgia,Serif;
+    font-size: 100%;
+    font-size-adjust: inherit;
+    font-stretch: inherit;
+    font-style: inherit;
+    font-variant: inherit;
+    font-weight: inherit;
+    text-indent: 0;
+    letter-spacing: 0;
+    line-height:1.5em;
+    vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+    word-spacing: normal;
+';
 
 echo join(', ', array_unique($names)) . " {\n" . $css . "\n}\n";
 
