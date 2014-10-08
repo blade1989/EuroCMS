@@ -64,6 +64,13 @@ $css = '
 echo join(', ', array_unique($names)) . " {\n" . $css . "\n}\n";
 
 
+if ($doc->getElementById('article-header')->tagName) {
+	echo "/* Found: tags with id */ \n" . $doc->getElementById('article-header')->tagName . "#article-header" . " {\n border: 1px solid #454545; \n }";
+} else {
+	echo "";
+}
+
+
 
 ?>
 
