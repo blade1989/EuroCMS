@@ -39,15 +39,35 @@ foreach ($nodes as $node) {
     $names[] = $node->nodeName;
 }
 
-$css = '	color:#454545;';
+$css = '
+    color: #454545;
+';
 
-echo join(', ', array_unique($names)) . " {\n" . $css . "\n}\n";
+echo join(', ', array_unique($names)) . " {" . $css . "}";
 
+echo "\n\n /* Testing */ \n\n";
 
+// $tag_string = implode(', ', $names);
+// echo $tag_string;
 
 ?>
 
 
+
+<?php
+
+echo "\n <!-- \n";
+$html = "index.php";
+
+$dom = new DOMDocument;
+$dom->loadHTML($html);
+$books = $dom->getElementsByTagName('intro');
+foreach ($books as $book) {
+    echo $book->nodeValue, PHP_EOL;
+}
+
+echo "\n-->";
+?>
 
 
 
