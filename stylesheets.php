@@ -25,7 +25,7 @@ Name        :   framework.css
     $params   = $_SERVER['QUERY_STRING'];
     $currentUrl = $protocol . '://' . $host . $script . '?' . $params;
 
-echo $currentUrl;
+//echo $currentUrl;
 //
 // $currentUrl will replace index.php: $doc->loadHTML(file_get_contents('index.php'));
 // and hopefully they will play nice. 
@@ -35,7 +35,7 @@ echo $currentUrl;
 ini_set('memory_limit', '400M');
 
 $doc = new DOMDocument();
-$doc->loadHTML(file_get_contents('index.php')); // Don't know how to make it use the loaded document
+$doc->loadHTML(file_get_contents('$currentUrl')); // Don't know how to make it use the loaded document
 
 $xpath = new DOMXpath($doc);
 $nodes = $xpath->query('//*');
