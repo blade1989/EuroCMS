@@ -16,8 +16,22 @@ Name        :   framework.css
 ----------------------------------------------- 
 */
 
-
 <?php
+
+    $protocol = strpos(strtolower($_SERVER['SERVER_PROTOCOL']),'https') 
+                    === FALSE ? 'http' : 'https';
+    $host     = $_SERVER['HTTP_HOST'];
+    $script   = $_SERVER['SCRIPT_NAME'];
+    $params   = $_SERVER['QUERY_STRING'];
+    $currentUrl = $protocol . '://' . $host . $script . '?' . $params;
+
+echo $currentUrl;
+//
+// $currentUrl will replace index.php: $doc->loadHTML(file_get_contents('index.php'));
+// and hopefully they will play nice. 
+// ^ Source: http://www.phpf1.com/tutorial/get-current-page-url.html
+
+
 ini_set('memory_limit', '400M');
 
 $doc = new DOMDocument();
