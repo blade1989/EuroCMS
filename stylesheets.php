@@ -53,10 +53,6 @@ foreach ($nodes as $node) {
     $names[] = $node->nodeName;
 }
 
-<<<<<<< HEAD
-$css = '
-    color: #454545;
-=======
 $css = '	
     -webkit-box-sizing: border-box; 
     -moz-box-sizing: border-box; 
@@ -77,17 +73,11 @@ $css = '
     margin: 0;
     padding: 0;
     word-spacing: normal;
->>>>>>> c2c77c5b0150444ea5caca39d92a2ec9871bd74a
 ';
 
-echo join(', ', array_unique($names)) . " {" . $css . "}";
+echo join(', ', array_unique($names)) . " {\n" . $css . "\n}\n";
 
-echo "\n\n /* Testing */ \n\n";
 
-<<<<<<< HEAD
-// $tag_string = implode(', ', $names);
-// echo $tag_string;
-=======
 if ($doc->getElementById('article-header')->tagName) {
 	echo "/* Found: tags with id */ \n" . $doc->getElementById('article-header')->tagName . "#article-header" . " {\n border: 1px solid #454545; \n }";
 } else {
@@ -95,26 +85,10 @@ if ($doc->getElementById('article-header')->tagName) {
 }
 
 
->>>>>>> c2c77c5b0150444ea5caca39d92a2ec9871bd74a
 
 ?>
 
 
-
-<?php
-
-echo "\n <!-- \n";
-$html = "index.php";
-
-$dom = new DOMDocument;
-$dom->loadHTML($html);
-$books = $dom->getElementsByTagName('intro');
-foreach ($books as $book) {
-    echo $book->nodeValue, PHP_EOL;
-}
-
-echo "\n-->";
-?>
 
 
 
