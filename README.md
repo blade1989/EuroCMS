@@ -9,9 +9,9 @@ Future functionalities
 
  - Theme Manager.
   - Customize themes to fit your needs(Or build them from scratch)
- - Builtin Editor(EuroEditor). 
+ - Builtin Editor([EuroEditor](https://github.com/blade1989/EuroEditor)). 
   - Support for Inline, MD, and completely customizible. 
- - Analytics modules(PHP)
+ - [Analytics modules]( [EuroMetrics](https://github.com/blade1989/EuroMetrics) )
  - DashBoard(EuroDash)
  
 
