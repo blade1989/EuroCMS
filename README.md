@@ -1,11 +1,11 @@
-EuroCMS
-=======
+#EuroCMS
+
 
 **Your free, easy to use, and customizable Content Management System**
 
 ---
 
-Future functionalities 
+##Future functionalities 
 
  - Theme Manager.
   - Customize themes to fit your needs(Or build them from scratch)
@@ -14,9 +14,23 @@ Future functionalities
  - Analytics modules([EuroMetrics](https://github.com/blade1989/EuroMetrics))
  - DashBoard(EuroDash)
  
+##[framework.css](https://github.com/blade1989/framework.css)
 
-Howto
-=======
+> Part reset, part normalize. It tries to be the very best, Like no css ever was. To catch visual inconsistencies is its real test, To train it is my cause... Sorry for that.
+
+
+##[EuroEditor](https://github.com/blade1989/EuroEditor)
+
+> EuroEditor, Your free, easy to use, and customizable web based editor
+
+
+
+##[EuroMetrics](https://github.com/blade1989/EuroMetrics)
+
+> A Google analytics replacement, for EuroCMS!
+
+##Howto
+
 
 Currently fiction:
  1. Extract in your server.
