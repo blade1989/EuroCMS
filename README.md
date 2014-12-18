@@ -13,11 +13,6 @@
   - Support for Inline, MD, and completely customizible. 
  - Analytics modules([EuroMetrics](https://github.com/blade1989/EuroMetrics))
  - DashBoard(EuroDash)
- 
-##[framework.css](https://github.com/blade1989/framework.css)
-
-> Part reset, part normalize. It tries to be the very best, Like no css ever was. To catch visual inconsistencies is its real test, To train it is my cause... Sorry for that.
-
 
 ##[EuroEditor](https://github.com/blade1989/EuroEditor)
 
@@ -28,6 +23,15 @@
 ##[EuroMetrics](https://github.com/blade1989/EuroMetrics)
 
 > A Google analytics replacement, for EuroCMS!
+
+ 
+##[framework.css](https://github.com/blade1989/framework.css)
+
+> Part reset, part normalize. It tries to be the very best, Like no css ever was. To catch visual inconsistencies is its real test, To train it is my cause... Sorry for that.
+
+##[framework.js](https://github.com/blade1989/framework.js)
+
+> The js framework for webbrowsers
 
 ##Howto
 
