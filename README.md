@@ -7,8 +7,6 @@
 
 ##Status: Pre-Alpha
 
-**Pre-Alpha-
-
 Right now, this is barely in a pre-alpha status. Don't expect anything mayor from it.
 
 
