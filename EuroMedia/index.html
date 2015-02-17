@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+
+<!--**************************************************
+Author		: Imri Paloja
+Email 		: Imri.paloja@gmail.com
+HomePage	: www.eurobytes.nl
+Version 	: 0.1
+Name 		: EuroMedia
+**************************************************-->
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>EuroMedia by Imri Paloja</title>
+    <link rel="shortcut icon" href="http://www.eurobytes.nl/favicon.ico" type="image/x-icon">
+    <meta name="description" content="EuroMedia, Your free, easy to use, and customizable web based editor">
+    <meta name="keywords" content="Editor, advanced, customizable">
+    <meta name="author" content="Imri Paloja">
+
+	<!-- HTML5 and CSS3 for IE less than 9 -->
+
+	  <!--[if lt IE 9]>
+	    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	  <![endif]-->
+
+	  <!-- css3-mediaqueries.js for IE less than 9 -->
+	  <!--[if lt IE 9]>
+	    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+
+	<![endif]-->
+
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+  <link rel="stylesheet" href="EuroMedia.css">
+  <!-- <link rel="stylesheet" href="http://www.eurobytes.nl/css/class.css"> -->
+
+<style>
+html, body {
+  background: #EEEEEE;
+}
+
+article {
+  max-width: 50em;
+  background: white;
+  padding: 2em;
+  margin: 1em auto;
+  border: 1px solid #CCCCCC;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  width: 80%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  border-bottom: 1px solid #454545;
+}
+
+</style>
+
+</head>
+<body>
+
+
+ <article>
+
+
+
+<div id="euromedia"> 
+
+    <video id="europlayer" width="420" poster="media/13 - Yelawolf - Till It's Gone.jpg">
+  <!--     <source src="http://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+      <source src="http://www.w3schools.com/html/mov_bbb.ogg" type="video/ogg"> -->
+      <source src="media/13 - Yelawolf - Till It's Gone.mp3">
+        Your browser does not support HTML5 video.
+    </video>
+
+    <div id="emb">
+      <button id="play" onclick="play()">start</button> 
+      <button id="pause" onclick="pause()" style="display: none;">pause</button> 
+
+      <progress id="emp" max='100' value='0'><span>0</span>% played</progress>
+
+      <button id="request">[F]</button>
+    </div>
+  
+<!--   <progress id='emp' max='70'>
+    
+  </progress> -->
+
+</div> 
+
+<script> 
+
+
+
+      $('#request').click(function () {
+        screenfull.request($('#euromedia')[0]);
+        // does not require jQuery, can be used like this too:
+        // screenfull.request(document.getElementById('euromedia'));
+      });
+
+      $('#exit').click(function () {
+        screenfull.exit();
+      });
+
+      $('#toggle').click(function () {
+        screenfull.toggle($('#euromedia')[0]);
+      });
+
+      $('#request2').click(function () {
+        screenfull.request();
+      });
+
+
+// var myVideo = document.getElementById("EuroPlayer"); 
+
+// function playPause() { 
+//     if (myVideo.paused) 
+//         myVideo.play(); 
+//     else 
+//         myVideo.pause(); 
+// } 
+
+// function makeBig() { 
+//     myVideo.width = 660; 
+// } 
+
+// function makeSmall() { 
+//     myVideo.width = 320; 
+// } 
+
+// function makeNormal() { 
+//     myVideo.width = 420; 
+// } 
+</script> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2>Reference</h2>
+
+<ul>
+  <li>
+    <a href="http://www.w3schools.com/html/html_media.asp">www.w3schools.com: HTML Multimedia</a>
+  </li>
+</ul>
+
+
+</article>
+
+    <script type="text/javascript" src="EuroMedia.js"></script>
+</body>
+</html>

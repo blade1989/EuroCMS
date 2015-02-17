@@ -1,0 +1,82 @@
+<html>
+<head>
+<title>Notification HTML5</title>
+<link rel="stylesheet" type="text/css" href="http://localhost/css/class.css">
+
+<script>
+function notifyMe() {
+  // Let's check if the browser supports notifications
+  if (!("Notification" in window)) {
+    alert("This browser does not support desktop notification");
+  }
+
+  // Let's check if the user is okay to get some notification
+  else if (Notification.permission === "granted") {
+    // If it's okay let's create a notification
+  var options = {
+        body: "What are you looking at?",
+        icon: "http://www.eurobytes.nl/images/corneillie-black-red.jpg",
+        dir : "ltr"
+    };
+  var notification = new Notification("Imri Paloja",options);
+  }
+
+  // Otherwise, we need to ask the user for permission
+  // Note, Chrome does not implement the permission static property
+  // So we have to check for NOT 'denied' instead of 'default'
+  else if (Notification.permission !== 'denied') {
+    Notification.requestPermission(function (permission) {
+      // Whatever the user answers, we make sure we store the information
+      if (!('permission' in Notification)) {
+        Notification.permission = permission;
+      }
+
+      // If the user is okay, let's create a notification
+      if (permission === "granted") {
+        var options = {
+              body: "This is the body of the notification",
+              icon: "icon.jpg",
+              dir : "ltr"
+          };
+        var notification = new Notification("Hi there",options);
+      }
+    });
+  }
+
+  // At last, if the user already denied any notification, and you
+  // want to be respectful there is no need to bother them any more.
+}
+</script>
+</head>
+<body>
+
+<article style="margin: 45px auto;">
+
+<button onclick="notifyMe()" style="">Show me notification</button>
+
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</p>
+
+
+  <h2>Source:</h2>
+
+<ul>
+  <li>
+    <a href="http://codeforgeek.com/2014/10/desktop-notification-like-facebook-using-html5/">Desktop Notification Like Gmail using HTML5</a>
+  </li>
+  <li>
+    <a href="http://demo.codeforgeek.com/">The CFG Demo's | Code for geek</a>
+  </li>
+</ul>
+
+</article>
+
+
+</body>
+</html>

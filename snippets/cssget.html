@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>css get</title>
+
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="class.css">
+
+<style>
+	#textarea {
+		max-width: 100%;
+		min-width: 50%;
+		width: 100%;
+		margin: 0px auto;
+		height: 750px;
+	}
+</style>
+
+</head>
+<body>
+	
+<div style="margin: 20px auto;padding: 20px; width: 750px;border: 1px solid #CCCCCC;background-color: #F9F9F9;">
+	<p id="intro">
+		This is the content of the current css, be carefull. Practice before you save anything!
+	</p>
+
+<script>
+jQuery(document).ready(function($) {
+    var $my_stylesheet_url = $('head').find('link').attr('href');
+
+    //alert($my_stylesheet_url);
+
+    $("#link").attr("value", "" + $my_stylesheet_url + "");
+
+    var content;
+    $.get($my_stylesheet_url, function(data) {
+        content = data;
+        alert(content);
+        
+    });
+});
+
+
+</script>
+
+<input id="link" placeholder="link to css file" value="" type="url">
+
+<button id="button" value="Fetch CSS">Fetch CSS</button>
+
+<br>
+
+<textarea id="textarea" style="display:none;">
+	CSS Content Will load here
+</textarea>
+
+
+<script>
+$('#button').click(function() {
+    var link = $('#link').val();
+    $.ajax({
+        url: link,
+        dataType: 'text',
+        success: function(content) {
+            $('#textarea').val(content);
+        }
+    });
+    //$("#textarea").attr('style', 'display: block;');
+    $("#textarea").removeAttr('style');
+});
+</script>
+
+</div>
+</body>
+</html>

@@ -18,24 +18,11 @@ Name        :   framework.css
 
 <?php
 
-    $protocol = strpos(strtolower($_SERVER['SERVER_PROTOCOL']),'https') 
-                    === FALSE ? 'http' : 'https';
-    $host     = $_SERVER['HTTP_HOST'];
-    $script   = $_SERVER['SCRIPT_NAME'];
-    $params   = $_SERVER['QUERY_STRING'];
-    $currentUrl = $protocol . '://' . $host . $script . '?' . $params;
-
-//echo $currentUrl;
-//
-// $currentUrl will replace index.php: $doc->loadHTML(file_get_contents('index.php'));
-// and hopefully they will play nice. 
-// ^ Source: http://www.phpf1.com/tutorial/get-current-page-url.html
-
 
 ini_set('memory_limit', '400M');
 
 $doc = new DOMDocument();
-$doc->loadHTML(file_get_contents('$currentUrl')); // Don't know how to make it use the loaded document
+$doc->loadHTML(file_get_contents('$hope')); // Don't know how to make it use the loaded document
 
 $xpath = new DOMXpath($doc);
 $nodes = $xpath->query('//*');
@@ -77,13 +64,43 @@ $css = '
 
 echo join(', ', array_unique($names)) . " {\n" . $css . "\n}\n";
 
-
-if ($doc->getElementById('article-header')->tagName) {
-	echo "/* Found: tags with id */ \n" . $doc->getElementById('article-header')->tagName . "#article-header" . " {\n border: 1px solid #454545; \n }";
+if ($doc->getElementById('#content')->tagName) {
+echo "/* Found: tags with id */ \n" . $doc->getElementById('#content')->tagName . "#content" . " {\n border: 1px solid #454545; \n }";
 } else {
-	echo "";
+echo "\n /* Nada */ \n";
 }
 
+
+if ($doc->getElementById('topnav')->tagName) {
+    echo "/* Found: tags with id */ \n" . $doc->getElementById('#topnav')->tagName . "#topnav" . " {\n border: 1px solid #454545; \n }";
+} else {
+    echo "\n /* Nada */ \n";
+}
+
+if ($doc->getElementById('content')->tagName) {
+    echo "/* Found: tags with id */ \n" . $doc->getElementById('#content')->tagName . "#content" . " {\n 
+
+    background-color: #F9F9F9;
+    background-image: url(\"http://www.eurobytes.nl/images/line.png\");
+    box-shadow: 2px 2px 2px 0 #000000;
+    height: 100%;
+    margin: 0px;
+    padding: 15px;
+    text-align: center;
+    width: 100%;
+
+
+
+     \n }";
+} else {
+    echo "\n /* Nada */ \n";
+}
+
+if ($doc->getElementById('content')->tagName) {
+echo "/* Found: tags with id */ \n" . $doc->getElementById('intro')->tagName . "#intro" . " {\n border: 1px solid #454545; \n }";
+} else {
+    echo "\n /* Nada */ \n";
+}
 
 
 ?>
@@ -113,6 +130,78 @@ body,html {
 	width: 80%;
 }
 
+/*
+#content {
+    background-color: #F9F9F9;
+    background-image: url("http://www.eurobytes.nl/images/line.png");
+    box-shadow: 2px 2px 2px 0 #000000;
+    height: 100%;
+    margin: 0px;
+    padding: 15px;
+    text-align: center;
+    width: 100%;
+}*/
+
+aside {
+    background-color: #f9f9f9;
+    border-top: 1px solid #CCCCCC;
+    border-left: 0px none;
+    border-right: 1px solid #CCCCCC;
+    border-bottom: 1px solid #CCCCCC;
+    float: right;
+    /*padding: 15px 15px 15px 45px;*/
+    height: 100%;
+    padding-bottom: 15px;
+    margin-top: 0px;
+    width: 28%;
+}
+
+aside .align {
+    margin-bottom: 5%;
+    margin-left: 2%;
+    margin-top: 5%;
+}
+
+
+aside .ad1 {
+    background-color: #EEEEEE;
+    border: 1px solid #CCCCCC;
+    width: 250px;
+    height: 250px;
+}
+
+.ad1 {
+    background-color: #EEEEEE;
+    border: 1px solid #CCCCCC;
+    height: 250px;
+    width: 250px;
+}
+
+.ads {
+    z-index: 400;
+}
+
+.adblock {
+    background-image: url("/favicon.png");
+    background-position: 183px 5px;
+    background-repeat: no-repeat;
+    background-size: 52px auto;
+    margin-top: 50px;
+    padding: 40px 56px 10px;
+    position: absolute;
+}
+
+.adblock p {
+    background-color: #FFFFFF;
+    border: 1px solid #000000;
+    border-radius: 10px 0px 10px 10px;
+    margin-left: -45px;
+    margin-top: 15px;
+    padding: 5px;
+    width: 173px;
+}
+
+
 article {
 	border: 1px solid #CCCCCC;
 	background-color: #FFFFFF;
@@ -133,6 +222,6 @@ img {
     text-align: center;
     width: 100%;
     text-transform: capitalize;
-}
+} 
 
 ?>

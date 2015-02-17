@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Link something</title>
+	<link rel="stylesheet" type="text/css" href="http://www.eurobytes.nl/css/class.css">
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+<style>
+#editor {
+	padding: 2px 5px;
+	min-height: 250px;
+}
+
+#editor[contentEditable="true"] {
+	border: 2px dotted #CCCCCC;
+	background-color: #EEEEEE;
+}
+
+img {
+	width: 75%;
+}
+
+</style>
+
+</head>
+<body>
+
+<article style="margin: 45px auto; border: 1px solid #CCCCCC;width: 850px;">
+
+<h1>EuroEditor Voor de ESD-Menu</h1>
+
+<button onclick="link()" id="link">Link</button>
+<button onclick="img()" id="img">IMG</button>
+
+<br>
+<br>
+
+
+<div onClick="this.contentEditable='true';"  onClick="this.style='border: 1px dotted #CCCCCC;';" id="editor" spellcheck="false"></div>
+
+
+<input type="hidden" name="" value="">
+
+<!-- <textarea id="editor" spellcheck="false" style="resize: none;width: 100%;">
+
+</textarea> -->
+
+
+
+
+</article>
+
+
+
+
+
+<script>
+
+function link() {
+    var link = prompt("Insert hyperlink", "http://");
+    var title = prompt("Insert hyperlink title", "title");
+    var name = prompt("Insert hyperlink name", "name");
+    
+    if (link != null) {
+        document.getElementById("editor").innerHTML =
+        "\n\<a href=\"" + link + "\" title=\"" + title + "\">"+ name +"</a>\n";
+    }
+}
+
+
+function img() {
+    var link = prompt("Insert img link", "http://example.com/example.jpg");
+    var title = prompt("Insert img title", "title");
+    //var name = prompt("Insert hyperlink name", "name");
+    
+    if (link != null) {
+        document.getElementById("editor").innerHTML =
+        "\n\<a href=\"" + link + "\" title=\" " + title + " \">\n<img src=\"" + link + "\" alt=\"" + title + "\">\n</a>\n";
+    }
+}
+
+$('#editor').on('keydown', function(e){
+    //Check if it was CTRL-L
+    if(e.keyCode == 76 && e.ctrlKey)
+    {
+        var link = prompt("Enter a link : ");
+    }
+});
+
+</script>
+
+	
+</body>
+</html>

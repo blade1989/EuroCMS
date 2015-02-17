@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<!--**************************************************
+Author      : Imri Paloja
+Email       : imri.paloja@gmail.com
+HomePage    : www.eurobytes.nl
+Version     : 0.1
+Name        : EuroEditor
+**************************************************-->
+
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Meta</title>
+            <meta name="description" content="Automaatische Inhoudsopgave">
+            <meta name="keywords" content="Inhoudsopgave, automatisch">
+            <meta name="author" content="Imri Paloja">
+  <meta name="biz-id" content="q6aDxTSK7njG7qWB1tSV5g">
+            <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+        <script>
+function pageinfo() {
+    var pageinfo =
+        "<ul id=\"EuroTOC\" style=\"display: block;\">" +
+        "<li id=\"tocid\">Table of Content <button id=\"closetoc\" onclick=\"closetoc()\">[-]</button>";
+
+    var newLine, el, title, id, hid;
+
+    // searches every tag you put in here
+    $("meta").each(function() {
+
+        el = $(this);
+        //title = el.text();
+        //id = "#" + el.text().replace(/\s/g, ""); // get the content of the header tags removes spaces and puts a # in front of it.
+        //hid = el.text().replace(/\s/g, ""); // get the content of the header tags
+        //el.attr('id', ""+ hid + ""); // applies the header content in the id tag.
+
+
+    // Works Fine:
+
+        // newLine =
+        //     "<li>\n" +
+        //         "<a href='" + id + "' title='" + title + "' >" + title +
+        //     "</a>\n" +
+        //     "</li>\n";
+
+        newLine =
+            "<li>\n" +
+                "<a href='" + id + "' title='" + title + "' >" + title +
+            "</a>\n" +
+            "</li>\n";
+
+        pageinfo += newLine;
+
+    });
+
+    pageinfo +=
+        "</li>" +
+        "</ul>";
+
+    $("#metadata").prepend(pageinfo);
+
+$('#toc').attr('style', 'display: none;');
+
+}
+
+function closetoc() {
+    $("#EuroTOC").remove();
+    $('#toc').attr('style', 'display: block;');
+    $('h1, h2, h3, h4, h5, h6').removeAttr('id');
+}
+
+
+function tocbutton() {
+    var tocbutton = 
+    "<button onclick=\"pageinfo()\" id=\"toc\" title=\"Table Of Contents\">[+]</button>";
+    $("body").prepend(tocbutton)
+}
+
+
+// load the function on page start
+window.onload = pageinfo;
+
+
+function meta() {
+        console.log('ready');
+       console.log($('head').find('meta[name="biz-id"]').attr('content'));
+     });
+
+
+        </script>
+
+
+<style>
+
+a {
+    color: #000000;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+article {
+  max-width: 50em;
+  background: white;
+  padding: 2em;
+  margin: 1em auto;
+  border: 1px solid #CCCCCC;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  width: 90%;
+}
+
+</style>
+
+    </head>
+    <body>
+<button onclick="pageinfo()" id="toc" title="Table Of Contents">[+]</button>
+        <article>
+            <div id="metadata">
+
+            </div>
+        </article>
+<script>
+     $(function() {
+        console.log('ready');
+       console.log($('head').find('meta[name="biz-id"]').attr('content'));
+     });
+</script>
+
+
+    </body>
+</html>

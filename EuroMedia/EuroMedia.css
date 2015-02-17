@@ -1,0 +1,79 @@
+* {
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+    -webkit-transition: all 500ms ease;
+    transition: all 500ms ease;
+    outline: 0px;
+}
+
+article * {
+    color: #454545;
+}
+
+#euromedia {
+    background: linear-gradient(to bottom, #454545, #1b1b1b) repeat scroll 0 0 rgba(0, 0, 0, 0.75);
+    border: 1px solid #CCCCCC;
+    margin: 0px auto;
+    overflow: hidden;
+    padding: 0px;
+    width: 450px;
+    height: 250px;
+    display: block;
+}
+
+#euromedia video {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+button:hover {
+    /*box-shadow: 0 1px 2px rgba(30, 25, 25, 0.2);*/
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) inset;
+    /*background: linear-gradient(to bottom, #F9F9F9, #FFFFFF) repeat scroll 0 0 rgba(0, 0, 0, 0.75);*/
+    cursor: pointer;
+}
+
+
+#euromedia > div#emb {
+    background: none repeat scroll 0 0 #454545;
+    width: 101%;
+    margin: -32px 0px 0px -1px;
+}
+
+button#fullscreen {
+    float: right;
+}
+
+button {
+    border: 1px solid #cccccc;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 13px;
+    height: 25px;
+    margin: 2px;
+    max-width: 40px;
+    outline: 0 none;
+    padding: 0 5px;
+    width: 40px;
+}
+
+/* Progress! styling */
+
+progress {
+  color: linear-gradient(to bottom, #F9F9F9, #FFFFFF) repeat scroll 0 0 rgba(0, 0, 0, 0.75);
+  font-size: .6em;
+  line-height: 1.5em;
+  text-indent: .5em;
+  width: 15em;
+  height: 1.8em;
+  border: 1px solid linear-gradient(to bottom, #F9F9F9, #FFFFFF) repeat scroll 0 0 rgba(0, 0, 0, 0.75);
+  background: #F9F9F9;
+  width: 77%;
+}
+
+
+progress::-webkit-progress-bar { background: #F9F9F9; }
+progress::-webkit-progress-value { background: linear-gradient(to bottom, #F9F9F9, #FFFFFF) repeat scroll 0 0 rgba(0, 0, 0, 0.75); }

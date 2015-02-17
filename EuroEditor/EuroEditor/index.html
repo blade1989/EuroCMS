@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+
+<!--**************************************************
+Author		: Imri Paloja
+Email 		: Imri.paloja@gmail.com
+HomePage	: www.eurobytes.nl
+Version 	: 0.2
+Name 		: EuroEditor
+**************************************************-->
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>EuroEditor by Imri Paloja</title>
+    <link rel="shortcut icon" href="http://www.eurobytes.nl/favicon.ico" type="image/x-icon">
+    <meta name="description" content="EuroEditor, Your free, easy to use, and customizable web based editor">
+    <meta name="keywords" content="Editor, advanced, customizable">
+    <meta name="author" content="Imri Paloja">
+
+	<!-- HTML5 and CSS3 for IE less than 9 -->
+
+	  <!--[if lt IE 9]>
+	    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	  <![endif]-->
+
+	  <!-- css3-mediaqueries.js for IE less than 9 -->
+	  <!--[if lt IE 9]>
+	    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+
+	<![endif]-->
+
+    <script type="text/javascript" src="js/jquery-latest.min.js"></script>
+
+	<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+
+    <script type="text/javascript" src="eeditor.js"></script>
+
+	<link rel="stylesheet" href="eeditor.css">
+
+	<!-- Font Awesome: The iconic font and CSS toolkit -->
+	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+<style>
+html, body {
+  background: #EEEEEE;
+  margin: 0px;
+  padding: 0px;
+}
+
+article {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #cccccc;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    margin: 20px auto;
+    max-width: 100%;
+    padding: 20px;
+    width: 65%;
+}
+
+#cancel {
+    display: block;
+    height: 30px;
+    margin: 415px 0 0 624px;
+    position: absolute;
+    width: 75px;
+    z-index: 9090;
+}
+
+.hidden {
+	display: none;
+	visibility: hidden;
+	width: 0px;
+	height: 0px;
+	resize: none;
+}
+
+.unhidden {
+	display: block;
+	visibility: visible;
+	width: 100%;
+	height: 100%;
+	resize: none;
+}
+
+/* TESTING */
+
+p.tabnav {
+	font-size: 1.1em;
+	text-transform: uppercase;
+	text-align: right;
+}
+
+p.tabnav a {
+	text-decoration: none;
+	color: #999;
+}
+
+*:focus, *:active  {
+    outline:0; /*removes the dotted border*/
+    /*noFocusLine: expression(this.onFocus=this.blur());*/
+}
+
+div#settingswindow {
+    background-color: #f1f1f1;
+    border: 1px solid #cccccc;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    left: 25%;
+    margin: 50px auto;
+    padding: 20px;
+    position: absolute;
+    right: 25%;
+    top: 25%;
+    z-index: 100;
+}
+
+#settingswindow section#settings b {
+    display: inline-block;
+    padding: 2px;
+}
+
+#settingswindow section {
+	display: none;
+}
+
+#settings label {
+    border-bottom: 1px solid #cccccc;
+    display: block;
+    width: 100%;
+}
+
+#settings input {
+    float: right;
+    margin-right: 50%;
+    width: auto;
+}
+
+#settingstab > button {
+    border-left: 1px solid #cccccc;
+    border-radius: 10px 10px 0 0;
+    border-right: 1px solid #cccccc;
+    border-top: 1px solid #cccccc;
+    float: none;
+    font-size: 100%;
+    margin: -3px;
+    width: auto;
+}
+
+#settingswindow > div {
+    border-bottom: 1px solid #cccccc;
+    margin: 0 0 0 -20px;
+    padding: 0 0 0 20px;
+}
+
+#info input {
+    float: right;
+    font-size: 12px;
+    margin: 0px 350px 5px 10px;
+    padding: 0 5px;
+    width: auto;
+}
+
+#info > form {
+    margin: 10px 0 0;
+}
+
+#info label {
+    float: right;
+    width: 100%;
+}
+
+.active{
+    /*background: linear-gradient(to bottom, #f9f9f9, #ffffff) repeat scroll 0 0 rgba(0, 0, 0, 0.75);*/
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) inset;
+    /*border: 1px solid #3465A4;*/
+    outline: none;
+}
+
+#style option {
+	display: block;
+}
+
+/* Fontawesome 'hack'. Display the icon after the content */
+.after:before {
+    float: right;
+}
+
+#font-family, #style {
+	font-size: 15px;
+}
+
+#spellcheck > span {
+    color: #000000;
+    float: right;
+    margin: -20px 3px 0 0;
+    padding: 0;
+}
+
+
+/*.line-break:after {
+	content: "↵";
+	font-size: 15px;
+	font-weight: 900;
+	}*/
+</style>
+
+</head>
+<body>
+
+<!-- <a href="https://www.dropbox.com/saver?origin=https%3A%2F%2Fwww.dropbox.com&amp;app_key=dropbox&amp;version=2" onclick="window.open(this.href,'targetWindow','toolbar=no, location=no, status=no, menubar=no, scrollbars=yes, resizable=yes, width=700, height=250'); return false;">Popup link</a> -->
+
+<script>
+// document.onmouseup = function(evt) {
+//     var editor = document.getElementById("eetextarea")
+//     var range = document.caretRangeFromPoint(evt.clientX, evt.clientY);
+//     var sel = window.getSelection();
+//     var selRange;
+
+//     //Save initial selection
+//     if (sel.rangeCount > 0) {
+//         selRange = sel.getRangeAt(0);
+//     }
+
+//     range.expand("eetextarea");
+//     sel.removeAllRanges();
+//     sel.addRange(range);
+//    document.getElementById("styleinfo").innerHTML = "bold: " + document.queryCommandState('bold');
+//     document.getElementById("styleinfo").innerHTML = "Style: Italic: " + document.queryCommandState("italic");
+//     document.getElementById("styleinfo").innerHTML = "Style: Underline: " + document.queryCommandState("underline");
+    
+//     //Restore original selection
+//     sel.removeAllRanges();
+//     if (selRange ) {
+//         selRange = sel.addRange(selRange);
+//     }
+// };
+
+// $( "#eetextarea" ).select(function() {
+//   $( "#somethingselected" ).text( "Something was selected" ).show().fadeOut( 1000 );
+// });
+
+
+// function settings() {
+//     $('section#settings').attr("style", "display: block;");
+// }
+
+</script>
+
+
+<!-- 	<div id="settingswindow">
+
+		<button onclick="closesettingswindow()" id="closesettingswindow">X</button>
+
+		<div id="settingstab">
+
+		<button id="infotab" onclick="info()" class="active">info</button>
+
+		<button id="settingstab" onclick="settings()">settings</button>
+
+		</div>
+
+		<section id="settings">
+
+        <b>Page Settings</b>
+
+        <p>enable or disable features!</p>
+
+        <label title="This will display a toc button in the article(position relative)">ToC?
+	        <input type="checkbox" name="" value="ToC?">
+        </label>
+
+
+        <label title="This will display the sidebar">sidebar
+	        <input type="checkbox" name="" value="sidebar" checked>
+        </label>
+
+
+        <label title="This will allow users to give feedback in the article">feedback
+	        <input type="checkbox" name="" value="feedback" checked>
+        </label>
+
+
+        <label title="Allow for users to comment in the comment box">comments
+	        <input type="checkbox" name="" value="comments" checked>
+        </label>
+
+		</section>
+
+		<section id="info" style="display: block;">
+
+			<form>
+				<label for="author">Author: 
+					<input type="text" value="Imri Paloja" id="author" disabled>
+				</label>
+
+				<br>
+
+				<label for="articletitle">Name: 
+					<input type="text" value="blah" id="articletitle">
+				</label>
+
+				<br>
+
+				<label for="type">Type: 
+					<input type="text" value="Article" id="type">
+				</label>
+
+				<br>
+
+				<label for="size">Size: 
+					<input type="text" value="21.05KB" id="size">
+				</label>
+
+				<br>
+
+				<label for="location">Location: 
+					<input type="text" value="/tutorials/blah" id="location">
+				</label>
+
+				<br>
+
+				<label for="standaard">Standaard: 
+					<input type="text" value="HTML5" id="standaard">
+				</label>
+
+				<br>
+
+				<label for="modified">Modified: 
+					<input type="text" value="13-12-2014 02:55" id="modified">
+				</label>
+
+				<br>
+
+				<label for="creation">creation:
+					<input type="text" value="13-12-2014" id="creation">
+				</label>
+
+				<br>
+
+				<label for="wordcount">Words: 
+					<input type="text" value="456" id="wordcount">
+				</label>
+
+				<br>
+
+				<label for="language">Language: 
+					<input type="text" value="English" id="language">
+				</label>
+
+				<br>
+
+			</form>
+		</section>
+	</div> -->
+
+
+<!-- <i class="fa fa-github" style="font-size: 75px;float: right;"></i> -->
+<a href="https://github.com/blade1989/EuroEditor" class="fa fa-github" style="font-size: 75px;float: right;text-decoration: none;margin: 20px;" title="blade1989/EuroEditor">
+</a>
+
+ <article>
+
+<!-- Testing Out imgur replacement, as they have a 250 images limit -->
+
+<!-- <script src="sjcl.js"></script>
+<script src="img.bi.js"></script>
+
+
+<img data-imgbi="https://img.bi/#!mnqSLmy!4Rnqh8LYLWEttc3PtIUibqtFWvR2l0g5Ug6m0zsZ" /> -->
+
+<!-- <p style="border-top: 1px solid #CCCCCC;border-bottom: 1px solid #CCCCCC;">
+	<a href="https://img.bi/#/2ADDhBO!vb1qTNBc8wnvLeoZF7SaEeJXVhd9KWDytI3BBUfN">
+		<img data-imgbi="https://img.bi/#/2ADDhBO!vb1qTNBc8wnvLeoZF7SaEeJXVhd9KWDytI3BBUfN" />
+	</a>
+</p> -->
+
+
+<!-- 		<div class="btn-group">
+		  <a class="btn btn-default" href="#"><i class="fa fa-align-left"></i></a>
+		  <a class="btn btn-default" href="#"><i class="fa fa-align-center"></i></a>
+		  <a class="btn btn-default" href="#"><i class="fa fa-align-right"></i></a>
+		  <a class="btn btn-default" href="#"><i class="fa fa-align-justify"></i></a>
+		</div> -->
+
+
+
+<div id="eeditor">
+
+	<div id="startmenuholder">
+
+
+		<div onclick="startmenu()" id="startmenu" style="display: none;">
+
+		</div>
+
+			<button id="cancel" title="cancel" onclick="closestartmenu()" style="display: none;">cancel</button>
+	</div>
+
+	<div id="eebuttons">
+
+		<button onclick="new()" id="new" title="Open a new article">
+			<i class="fa fa-file-o"></i>
+		</button>
+		<button onclick="startmenu()" id="open" title="Select a file from startmenu">
+			<i class="fa fa-download"></i>
+		</button>
+
+		<span class="spacer"></span>
+
+		<button onclick="save()" id="save" title="save this article">
+			<i class="fa fa-floppy-o"></i>
+		</button>
+
+		<button onclick="javascript:window.location='mailto:?subject=Interesting information&amp;body=I thought you might find this information interesting: ' + window.location;" id="mail" title="mail this page">
+			<i class="fa fa-envelope"></i>
+		</button>
+
+		<span class="spacer"></span>
+
+		<button onclick="edit()" id="edit" title="edit this article" style="opacity: 0.5;z-index: 0;">
+			<i class="fa fa-pencil-square-o"></i>
+		</button>
+
+		<button onclick="pdf()" id="expdf" title="Export as pdf">
+			<i class="fa fa-file-pdf-o"></i>
+		</button>
+		<button onclick="print()" id="print" title="Print this page">
+			<i class="fa fa-print"></i>
+		</button>
+		<button onclick="printpreview()" id="printpreview" title="Print preview">
+			<i class="fa fa-print" style="float: right;margin-bottom: -5px;"></i>
+			<i class="fa fa-search" style="float: right;margin-top: -5px; margin-left: -10px;font-size: 12px; color: #1B1b1B;"></i>
+		</button>
+
+		<span class="spacer"></span>
+
+		<!-- <button onclick="spellcheckon()" id="spellcheck" title="Turn Spell Checker on"></button>
+		<button onclick="spellcheckoff()" id="spellcheckoff" title="Turn Spell Checker Off"></button> -->
+
+		<button onclick="spellcheckon()" id="spellcheck" title="Turn Spell Checker on" style="opacity: 0.5;z-index: 0;">
+			<i class="fa fa-check"></i>
+			<span>A</span>
+		</button>
+
+
+		<span class="spacer"></span>
+
+		<button onclick="cut()" id="cut" title="Cut the selected text" style="opacity: 0.5;z-index: 0;">
+			<i class="fa fa-scissors"></i>
+		</button>
+
+		<button onclick="copy()" id="copy" title="copy the selected text" style="opacity: 0.5;z-index: 0;">
+			<i class="fa fa-files-o"></i>
+		</button>
+
+<!-- 		<button onclick="copyToClipboard()" id="cp" title="Clipboard manager" style="opacity: 0.5;z-index: 0;">
+			<i class="fa fa-clipboard"></i>
+		</button>
+ -->
+
+		<span class="spacer"></span>
+
+		<button onclick="revertt()" id="revert" title="revert the last made changes" style="opacity: 0.5;z-index: 0;">
+			<i class="fa fa-undo"></i>
+		</button>
+
+		<!--[if !IE]> -->
+		<div class="notIE">
+		  <!-- <![endif]-->
+		  <span class="fancyArrow fa fa-history"></span>
+		  <select name="versionhistory" class="">
+ 			<option title="Revert back to">enter</option>
+ 			<option title="Revert back to">space</option>
+ 			<option title="Revert back to">bold</option>
+		  </select>
+		  <!--[if !IE]> -->
+		</div>
+		<!-- <![endif]-->
+
+
+		<button onclick="apply()" id="apply" title="Forward with the last made changes" style="opacity: 0.5;background-image: none;z-index: 0;">
+			<i class="fa fa-repeat"></i>
+		</button>
+
+
+		<span class="spacer"></span>
+
+		<button id="link" title="create a link">
+			<i class="fa fa-link"></i>
+		</button>
+		
+		<button onclick="img()" id="img" title="Upload/link to an image">
+			<i class="fa fa-picture-o"></i>
+		</button>
+
+		<span class="spacer"></span>
+
+		<button onclick="table()" id="table" title="create a table">
+			<i class="fa fa-table "></i>
+		</button>
+
+
+		<!-- <button onclick="ucharachters()" id="ucharachters" title="Display unprintable charachters"></button> -->
+
+		<span class="spacer"></span>
+
+		<!-- 
+
+		<button onclick="upload()" id="upload" title="Upload files">
+
+		&#x1F4CE;
+[
+<span>&darr;</span>
+<span>&bull;</span>
+
+]
+		</button> 
+	-->
+
+		<button onclick="fullscreen()" id="fullscreen" title="Full screen editor">
+			<i class="fa fa-arrows-alt"></i>
+		</button>
+
+		<button onclick="source()" id="source" title="View Source Code">
+			<i class="fa fa-code"></i>
+		</button>
+
+		<button onclick="index()" id="toc" title="Table Of Contents">
+			<i class="fa fa-compass"></i>
+		</button>
+
+
+		<button onclick="help()" id="help" title="Display help page">
+			<i class="fa fa-question"></i>
+		</button>
+
+
+		<button onclick="pagefeaturebutton()" id="pagefeature" title="Show the page settings">
+			<span>&equiv;</span>
+			<!-- <i class="fa fa-bars"></i>  -->
+		</button>
+
+		<button onclick="unprintablecharachters()" id="unprintablecharachters" title="Show non printable chanrachter">
+			<!-- <i class="fa fa-paragraph"></i> -->&para;
+			<!-- ¶ -->
+		</button>
+
+	</div>
+	
+	<div id="eebuttons2">
+
+		<!--[if !IE]> -->
+		<div class="notIE">
+		  <!-- <![endif]-->
+		  <span class="fancyArrow fa fa-chevron-down"></span>
+				<select title="style" id="style">
+				  <option value="paragraph" class="fa fa-paragraph after">parargraph</option>
+				  <option value="H1" id="H1" class="fa fa-header">1</option>
+				  <option value="H2" id="H2" class="fa fa-header">2</option>
+				  <option value="H3" id="H3" class="fa fa-header">3</option>
+				  <option value="blockquote" id="blockquote">blockquote</option>
+				  <option value="terminalcode" id="terminalcode" onclick="terminalcode()">terminalcode</option>
+				  <option value="prettyprint" id="prettyprint" onclick="prettyprint()" class="fa fa-code after">function EuroEditor.js() </option>
+				</select>
+		  <!--[if !IE]> -->
+		</div>
+		<!-- <![endif]-->
+
+		<!--[if !IE]> -->
+		<div class="notIE">
+		  <!-- <![endif]-->
+		  <span class="fancyArrow fa fa-chevron-down"></span>
+			<select title="font-family" id="font-family">
+			  <option value="default" class="fa fa-font">fonts</option>
+			  <option value="liberation-serif" style="font-family:liberation-serif;">Liberation Serif</option>
+			  <option value="serif" style="font-family:serif;">serif</option>
+			  <option value="sans-serif" id="sans-serif" style="font-family:sans-serif;">sans-serif</option>
+			  <option value="times-new-roman" style="font-family:times-new-roman;">Times New Roman</option>
+			</select>
+		  <!--[if !IE]> -->
+		</div>
+		<!-- <![endif]-->
+
+		<!--[if !IE]> -->
+		<div class="notIE">
+		  <!-- <![endif]-->
+		  <span class="fancyArrow fa fa-chevron-down"></span>
+			<select title="font-size" id="font-size">
+			  <option value="custom" id="custom" onclick="custominput()">custom</option>
+			  <option value="onepx">1px</option>
+			  <option value="twopx">2px</option>
+			  <option value="fourpx">4px</option>
+			  <option value="eightpx">8px</option>
+			  <option value="sixteenpx" selected>16px</option>
+			  <option value="twentyeightpx">28px</option>
+			</select>
+		  <!--[if !IE]> -->
+		</div>
+		<!-- <![endif]-->
+
+		<button id="bold" title="Bold selected text">
+			<i class="fa fa-bold"></i>
+		</button>
+
+		<button id="italic" title="Italic selected text">
+			<i class="fa fa-italic"></i>
+		</button>
+
+		<button id="underline" title="Underlin selected text">
+			<i class="fa fa-underline"></i>
+		</button>
+
+		<span class="spacer"></span>
+
+		<button id="textleft" title="Align text to the left">
+			<i class="fa fa-align-left"></i>
+		</button>
+		<button id="textcenter" title="Align text to the center">
+			<i class="fa fa-align-center"></i>
+		</button>
+
+		<button id="textright" title="Align text to the right">
+			<i class="fa fa-align-right"></i>
+		</button>
+
+		<button id="textjustified" title="Align text to the justified">
+			<i class="fa fa-align-justify"></i>
+		</button>
+
+		<span class="spacer"></span>
+
+		<button id="ol" title="Make an ordered list">
+			<i class="fa fa-list-ol"></i>
+		</button>
+
+		<button id="ul" title="Make an unorderd list">
+			<i class="fa fa-list-ul"></i>
+		</button>
+
+		<button id="tabtoleft" title="tab to the left">
+			<i class="fa fa-indent"></i>
+		</button>
+
+		<button id="tabtoright" title="tab to the right">
+			<i class="fa fa-outdent"></i>
+		</button>
+
+		<span class="spacer"></span>
+
+<!-- 		<button id="textcolor" title="Change text color" style="background-color: #454545;">A</button>
+		<button id="mark" title="mark the selected text" style="background-color: #CC0000;">A</button>
+
+ -->
+
+		<!--[if !IE]> -->
+		<div class="notIE">
+		  <!-- <![endif]-->
+		  <span class="fancyArrow fa fa-chevron-down"></span>
+		  <select name="ubuntu-smileys">
+			<option id="icon_biggrin" value="icon_biggrin">&nbsp;</option>
+			<option id="icon_confused" value="icon_confused">&nbsp;</option>
+			<option id="icon_cool" value="icon_cool">&nbsp;</option>
+			<option id="icon_eek" value="icon_eek">&nbsp;</option>
+			<option id="icon_mad" value="icon_mad">&nbsp;</option>
+			<option id="icon_neutral" value="icon_neutral">&nbsp;</option>
+			<option id="icon_razz" value="icon_razz">&nbsp;</option>
+			<option id="icon_sad" value="icon_sad">&nbsp;</option>
+			<option id="icon_smile" value="icon_smile">&nbsp;</option>
+			<option id="icon_surprised" value="icon_surprised" selected>&nbsp;</option>
+			<option id="icon_wink" value="icon_wink">&nbsp;</option>
+		  </select>
+		  <!--[if !IE]> -->
+		</div>
+		<!-- <![endif]-->
+
+	</div> <!-- eebuttons2 -->
+
+<!-- onClick="this.contentEditable='true';"  -->
+
+<form action="save.php">
+
+<div id="eetextarea" class="word_count unhidden" spellcheck="false" contentEditable="false" onchange="copy();">
+
+<h1 class="article-title">EuroEditor 0.2</h1>
+
+<p>
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</p>
+
+<!--  	<h1 style="margin: 0px auto; width: 50%;">
+ 		EuroEditor(Pre-Alpha)
+ 	</h1>
+
+ 		<p>
+ 			Due note that this is just a demo of an unfinished product. Many feature are still not working, or are incomplete. This is just a playground to get a glimpse of what is to come.
+ 		</p> -->
+
+
+</div>
+
+<!-- eetextarea -->
+
+
+<!-- <textarea id="holder" class="hidden" onchange="copy();"></textarea> -->
+
+<!-- <input type="submit" value="submit"> -->
+</form>
+
+		<div id="eetextareainfo">
+
+            Page: <span title="Not Working">1/10</span>
+          
+ 		| 
+            Words: <input type="text" value="" id="words" disabled title="Words">
+          
+ 		| 
+            Style: <span title="Not Working" id="styleinfo"></span>
+          
+ 		| <div id="somethingselected" style="display: none;">Something was selected</div>	
+
+ 			Language: <span title="Not Working">English(USA)</span>
+          
+ 		| 
+			<span id="spellcheckbaroff" title="Spell checker is off" class="spellcheckbaroff">Spellcheck: </span>  
+		</div>     
+
+</div> <!-- eeditor -->
+
+</article>
+
+</body>
+</html>

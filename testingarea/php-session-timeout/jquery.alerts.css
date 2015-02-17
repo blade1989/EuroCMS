@@ -1,0 +1,114 @@
+#popup_container {
+	font-family: Arial, sans-serif;
+	font-size: 12px;
+	min-width: 300px; /* Dialog will be no smaller than this */
+	max-width: 600px; /* Dialog will wrap after this width */
+	background: #ddd;
+	padding: 7px !important;
+	color: #454545;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	-moz-box-shadow: 0 0 2px #666;
+}
+
+#popup_title {
+	font-size: 18px;
+	line-height: 21px;
+	font-weight: normal;
+	color: #333;
+	background: #F9F9F9;
+	border: solid 1px #CCCCCC;
+	cursor: default;
+	padding: 10px;
+	margin: 0em;
+}
+
+#popup_content {
+	padding: 10px; 
+	margin: 0em;
+	background: #F9F9F9;
+	border: 1px solid #CCCCCC;
+	border-top: 0;
+}
+
+
+#popup_message {
+	margin: 10px 0;
+	border: 1px solid #CCCCCC;
+	background-color: #EEEEEE;
+}
+
+#popup_panel {
+	text-align: center;
+	margin: 1em 0em 0em 1em;
+}
+
+#popup_prompt {
+	margin: 5px 0;
+	padding: 7px 5px;
+	border: 1px solid #CCCCCC;
+	background: #F9F9F9;
+	-moz-border-radius: 2px; 
+	-webkit-border-radius: 2px; 
+	border-radius: 2px;
+	-moz-box-shadow: inset 1px 1px 1px #eee; 
+	-webkit-box-shadow: inset 1px 1px 2px #eee;
+	box-shadow: inset 1px 1px 2px #eee;
+	color: #666;
+}
+
+#popup_prompt:focus {
+	background: #F9F9F9;
+}
+
+#popup_overlay {
+	background:#000!important;
+	opacity:.5!important;
+}
+
+#popup_ok,#popup_cancel {
+	padding:5px 15px;
+	font-size:12px;
+	display:inline-block;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	-moz-box-shadow:1px 1px 2px #eee;
+	-webkit-box-shadow:1px 1px 2px #eee;
+	box-shadow:1px 1px 2px #eee;
+	cursor:pointer;
+}
+
+#popup_ok:hover,#popup_ok:active,#popup_cancel:hover,#popup_cancel:active {
+	background-position:0 -39px;
+}
+
+#popup_ok {
+	border:1px solid #CCCCCC;
+	background:#F9F9F9;
+	font-weight:700;
+	color:#454545;
+}
+
+#popup_ok:hover {
+	background:#EEEEEE;
+	border:1px solid #CCCCCC;
+	color:#454545;
+}
+
+#popup_cancel {
+	border:1px solid #ccc;
+	background:#eee;
+	text-shadow:1px 1px #f7f7f7;
+	color:#333;
+}
+
+#popup_cancel:hover {
+	background-color:#ddd;
+	border:1px solid #bbb;
+}
+
+#popup_prompt {
+	width:270px!important;
+}

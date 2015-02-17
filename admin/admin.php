@@ -20,7 +20,9 @@ $users = array(
 */
 
 $users = array(
- "username" => "password"
+ "imri" => "password",
+ "denis" => "password",
+ "mark" => "password"
 );
 
 if(isset($_GET['logout'])) {
@@ -67,8 +69,8 @@ echo '<!DOCTYPE html>
 
 <fieldset id="loginform">
 <legend>
-  <a href="/images/corneillie-black-red.jpg" title="$author">
-<img src="/images/corneillie-black-red.jpg" alt="$author" style="width:300px;height:250px;border:2px outset #CCCCCC;"></a>
+  <a href="http://www.eurobytes.nl/images/corneillie-black-red.jpg" title="$author">
+<img src="http://www.eurobytes.nl/images/corneillie-black-red.jpg" alt="$author" style="width:300px;height:250px;border:2px outset #CCCCCC;"></a>
 </legend>
 
  <a href="http://www.eurobytes.nl/" title="Homepage" style="

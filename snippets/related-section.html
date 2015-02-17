@@ -1,0 +1,313 @@
+<!DOCTYPE HTML>
+<html>
+  <title>EuroBytes - Your video/text tutorial site</title>
+    <link rel="stylesheet" type="text/css" href="http://www.eurobytes.nl/css/class.css">
+    <link rel="stylesheet" type="text/css" href="http://www.eurobytes.nl/css/flexslider.css">
+    <meta name="description" content="Drag &amp; Drop">
+    <meta name="keywords" content="HTML5, JavaScript">
+    <meta name="author" content="Imri Paloja">
+
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+<head>
+<style>
+* {
+    -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box; 
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+#div2 {
+  width: 750px;
+  height: 450px;
+  margin: 20px auto;
+  padding: 10px;
+  border: 1px solid #aaaaaa;
+}
+
+#div1 {
+  border-left: 1px solid #CCCCCC;
+  background-color: #F9F9F9;
+  position: absolute;
+  padding: 25px;
+  right: 0px;
+  top: 0px;
+  width: 325px;
+
+}
+
+#imagegalley {
+  border: 1px solid #CCCCCC;
+  background-color: #454545;
+}
+
+#imagegalley * img {
+  width: 75px;
+}
+
+*[draggable="true"] {
+    cursor: move;
+    z-index: 11;
+}
+
+*[draggable="true"]:active {
+    border: 1px solid #454545;
+}
+
+*[draggable="true"]:focus {
+    border: 1px solid #454545;
+}
+
+#s {
+    float: right;
+    margin: 2px auto;
+    padding: 0;
+    width: 205px;
+}
+
+video {
+  background-color: #EEEEEE;
+  border: 1px solid #CCCCCC;
+  width: 175px;
+  height: 100px;
+}
+
+input[type="submit"] {
+  background-color: #454545;
+  border: 1px solid #C01000;
+}
+
+#toc, #related {
+    background-color: #eeeeee;
+    border: 1px solid #cccccc;
+    float: right;
+    width: 250px;
+}
+
+/*video[draggable="true"]:after {
+  content:"W";
+}*/
+
+.dragable {
+  margin: 20px auto;
+}
+
+/*a:hover {
+  -webkit-transition: all 900ms ease;
+  transition: all 900ms ease;
+}*/
+
+</style>
+<script>
+function allowDrop(ev) {
+    ev.preventDefault();
+}
+
+function drag(ev) {
+    ev.dataTransfer.setData("text/html", ev.target.id);
+}
+
+function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text/html");
+    ev.target.appendChild(document.getElementById(data));
+}
+</script>
+
+
+</head>
+<body>
+
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+  <!-- <img src="http://www.w3schools.com/html/img_w3slogo.gif" draggable="true" ondragstart="drag(event)" id="drag1" width="88" height="31"> -->
+
+<header class="dragable" draggable="true" ondragstart="drag(event)">
+    <h1>
+      <a style="color: #454545;" id="site-name" title="Home" href="/">EuroBytes<sup style="font-size:12px;">(BETA)</sup></a>
+    </h1>
+    <p id="site-description">
+      <small>
+        Free tutorials, as in free speech, not free beer.
+      </small>
+    </p>
+  </header>
+
+<br>
+
+<div class="tag" draggable="true" ondragstart="drag(event)"> 
+  <a class="linktag" draggable="true" ondragstart="drag(event)" rel="nofollow" href="/search.php?query=Howto&amp;search=1">Howto</a> 
+  <a class="linktag" draggable="true" ondragstart="drag(event)" rel="nofollow" href="/search.php?query=games&amp;search=1">games</a> 
+  <a class="linktag" draggable="true" ondragstart="drag(event)" rel="nofollow" href="/search.php?query=OpenMW&amp;search=1">OpenMW</a> 
+</div>
+
+<br>
+
+  <nav class="nav" class="dragable" draggable="true" ondragstart="drag(event)">
+    <ul id="menu">
+        <li>Tutorials
+          <ul class="subnav">
+            <li><a rel="nofollow" href="/search.php?query=Linux&amp;search=1">Linux</a></li>
+            <li><a rel="nofollow" href="/search.php?query=FreeBSD&amp;search=1">FreeBSD</a></li>
+            <li><a rel="nofollow" href="/search.php?query=Mac%20os%20x&amp;search=1">Mac os x</a></li>
+            <li><a rel="nofollow" href="/search.php?query=Windows&amp;search=1">Windows</a></li>
+            <li><a rel="nofollow" href="/search.php?query=Review&amp;search=1">Review</a></li>
+          </ul>
+        </li>
+        <li>Editorials
+          <ul class="subnav">
+            <li><a href="/tutorials/privacy-and-security">Privacy &amp; Security</a></li>
+            <li><a href="#">The illuminate</a></li>
+          </ul>
+        </li>
+         <li><a class="fancybox fancybox.iframe" href="/submit">Contact</a></li>
+         <li><a href="/about">About</a></li>
+        </ul> 
+  </nav>
+
+<br>
+<br>
+
+    <ul id="related" draggable="true" ondragstart="drag(event)">
+      <li style="list-style-type: none; padding: 0px; text-align: center; margin: 0px 0px 0px -15px; border-bottom: 1px solid rgb(69, 69, 69);">
+        <b style="text-align: center;">Related Content</b>
+      </li>
+      <li>
+        <a href="#" title="Related">Related 1</a>
+      </li>
+      <li>
+        <a href="#" title="Related">Related 2</a>
+      </li>
+      <li>
+        <a href="#" title="Related">Related 3</a>
+      </li>
+      <li>
+        <a href="#" title="Related">Related 4</a>
+      </li>
+      <li>
+        <a href="#" title="Related">Related 5</a>
+      </li>
+    </ul>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<div id="accounts" draggable="true" ondragstart="drag(event)">
+
+    <!-- Place this code where you want the badge to render. -->
+    <a rel="author" title="plus.google.com/Imri.Paloja" href="https://plus.google.com/+ImriPaloja/posts" id="googleplus"></a>
+
+    <a title="YouTube.com/blade19899" href="http://www.youtube.com/user/blade19899" id="yt"></a>
+
+    <a title="Askubuntu.com/blade19899" href="http://askubuntu.com/users/36315/blade19899" id="ask"></a>
+ 
+    <a title="plus.google.com/+EurobytesNL" href="https://plus.google.com/b/118295573003800218471/+EurobytesNl/posts" id="EuroG"></a>
+
+   <a title="github.com: blade1989" href="https://github.com/blade1989" id="github"></a>
+
+  </div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+  <form method="get" action="/search.php" id="s" class="dragable" draggable="true" ondragstart="drag(event)">
+      <input type="text" id="searchbox" value="" placeholder="search" size="20" name="query">
+      <input type="hidden" value="1" name="search">
+      <!-- <input type="submit" value="S" id="s" style="height:25px;"> -->
+  </form>
+
+<br>
+
+  <ul id="imagegalley" class="dragable" draggable="true" ondragstart="drag(event)">
+    <li>
+      <img src="http://i.imgur.com/BjIANb0.png/nagios-or-icinga.png" alt="img">
+    </li>
+    <li>
+      <img src="http://i.imgur.com/BjIANb0.png/nagios-or-icinga.png" alt="img">
+    </li>
+    <li>
+      <img src="http://i.imgur.com/BjIANb0.png/nagios-or-icinga.png" alt="img">
+    </li>
+    <li>
+      <img src="http://i.imgur.com/BjIANb0.png/nagios-or-icinga.png" alt="img">
+    </li>
+    <li>
+      <img src="http://i.imgur.com/BjIANb0.png/nagios-or-icinga.png" alt="img">
+    </li>
+  </ul>
+
+
+  <video class="dragable" draggable="true" ondragstart="drag(event)">
+    <source src="http://www.w3schools.com/tags/movie.mp4" type="video/mp4">
+    <source src="http://www.w3schools.com/tags/movie.ogg" type="video/ogg">
+      Your browser does not support the video tag.
+  </video>
+
+
+<footer class="dragable" draggable="true" ondragstart="drag(event)">
+  <p>
+    License: <a href="http://creativecommons.org/licenses/by-sa/4.0/"> 
+        <abbr title="Attribution-ShareAlike 4.0 International">CC BY-SA 4.0</abbr></a> 
+        <a title="EuroBytes" href="http://www.eurobytes.nl/">EuroBytes</a>  |  EuroBytes theme by 
+        <a title="Author" rel="author" href="https://plus.google.com/+ImriPaloja/posts">Imri Paloja</a>
+  </p>
+</footer>
+
+
+
+    <ul id="toc" draggable="true" ondragstart="drag(event)">
+      <li style="list-style-type: none; padding: 0px; text-align: center; margin: 0px 0px 0px -15px; border-bottom: 1px solid rgb(69, 69, 69);">
+        <b style="text-align: center;">Table of Content</b>
+      </li>
+      <li>
+        <a href="#" title="Header">Header 1</a>
+      </li>
+      <li>
+        <a href="#" title="Header">Header 2</a>
+      </li>
+      <li>
+        <a href="#" title="Header">Header 3</a>
+      </li>
+      <li>
+        <a href="#" title="Header">Header 4</a>
+      </li>
+      <li>
+        <a href="#" title="Header">Header 5</a>
+      </li>
+    </ul>
+
+
+
+
+</div>
+
+<article id="div2" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+<a href="http://i.imgur.com/Ha4nxDJ.png" title="Native Viber For Linux">
+  <img src="http://i.imgur.com/Ha4nxDJ.png" alt="Native Viber For Linux">
+</a>
+
+</article>
+
+
+
+</body>
+</html>

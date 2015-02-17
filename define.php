@@ -100,10 +100,10 @@ echo "\n\n-->";
 <?php
     // Some variables 
 
-    $framworkcss    = "http://framework/framework.css";
+    $framworkcss    = "";
     $adminlink      = "<a href=\"/admin/index.php#formpost\" class=\"fancybox fancybox.iframe\" id=\"logon\" style=\"position: absolute;top:0px; right:0px;\">LOGIN</a>";
-//    $sitename       = "EuroCMS";
-//    $siteintro      = "Your free, easy to use, and customizable Content Management System";
+    $sitename       = "EuroCMS";
+    $siteintro      = "Your free, easy to use, and customizable Content Management System";
 
     // The site template
     $eurotemplate = "<html lang=\"en\">

@@ -1,0 +1,198 @@
+/*#admin-bar {
+    background-color: #FFFFFF;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+    box-shadow: 2px 4px 2px rgba(0, 0, 0, 0.3);
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2147483647;
+}
+
+#login-image {
+    background-image: url("/images/corneillie-black-red.jpg");
+    background-size: cover;
+    border-bottom: 1px solid #cccccc;
+    display: block;
+    height: 25px;
+    width: 35px;
+}
+
+#userloggedin {
+	border-bottom: 1px solid #CCCCCC;
+}
+
+#home {
+	color: #454545;
+	margin-top: -28px;
+	padding-bottom: 0;
+	text-decoration: none;
+	width: 65px;
+}*/
+
+/*#admin-bar-menu {
+    float: right;
+    list-style-type: none;
+    margin-top: -23px;
+    width: 88%;
+}*/
+
+
+#admin-bar-menu li {
+/*    float: left;
+    list-style-type: none;
+*/    margin-left: 1%;
+    margin-right: 0;
+    text-transform: uppercase;
+}
+/*
+#logout-image {
+    background-color: #333333;
+    float: right;
+    height: 25px;
+    margin-right: -90%;
+    width: 20px;
+}
+
+*/
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#loggonerr {
+    position: absolute;
+    border-top: 1px solid #CC0000;
+    border-bottom: 1px solid #CC0000;
+    background-color: #FFFFFF;
+    top: 50%;
+    width: 100%;
+
+}
+
+
+html body #logon {
+    display: none;
+    visibility: hidden;
+}
+
+#admin-bar {
+    background-color: #ffffff;
+    border-bottom: 1px solid;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.75);
+    height: 35px;
+    padding: 5px 0px;
+}
+
+#admin-bar a:hover {
+    text-decoration: underline;
+}
+
+#admin-bar li {
+    float: left;
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+#login-image {
+    background-image: url("http://www.eurobytes.nl/images/corneillie-black-red.jpg");
+    background-size: cover;
+    border-bottom: 1px solid #cccccc;
+    display: block;
+    height: 25px;
+    width: 35px;
+}
+
+#userloggedin {
+/*    float: left;
+    font-size: 12px;
+    margin-left: 3px;
+    margin-top: 23px;
+    padding: 0;*/
+}
+
+#logout-image {
+    border-left: 1px solid #CCCCCC;
+    padding-left: 10px;
+}
+
+#themechanger {
+    display: none;
+}
+
+#themechanger {
+    background-color: #ffffff;
+    border-top: 1px solid #cccccc;
+    bottom: 0;
+    box-shadow: 0 -2px 5px 0 rgba(0, 0, 0, 0.75);
+    color: #454545;
+    height: 250px;
+    margin: 0;
+    overflow-x: hidden;
+    padding: 0;
+    position: fixed;
+    right: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+html body .show_hide {
+    background-color: transparent;
+    border: 0 none;
+    color: #3465a4;
+    position: fixed;
+    margin: 0 0 0 97%;
+    opacity: 1;
+    right: 15px;
+    z-index: 100;
+}
+
+html body .show_hide:hover {
+    background-color: #FFFFFF;
+    text-decoration: underline;
+}
+
+#loginform {
+    background-color: #FFFFFF;
+    margin: 0 auto;
+    border: 1px solid #CCCCCC;
+    text-align: center;
+    width: 310px;
+}
+
+#dnd {
+    background-color: #ffffff;
+    border-left: 1px solid #cccccc;
+    height: 100%;
+    padding: 25px;
+    position: absolute;
+    right: 0;
+    top: 34px;
+    width: 250px;
+    z-index: 500;
+}
+
+.subnav {
+    display: none;
+}
+
+.subnav:hover {
+    display: block;
+}
+
+html body footer {
+    background-color: #ffffff;
+    background-image: none;
+    border-top: 1px solid #454545;
+    bottom: 0;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.75);
+    height: 60px;
+    margin: 0;
+    padding-left: 45px;
+    padding-right: 45px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
