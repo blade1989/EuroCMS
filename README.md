@@ -5,6 +5,13 @@
 
 ---
 
+##Status: Pre-Alpha
+
+**Pre-Alpha-
+
+Right now, this is barely in a pre-alpha status. Don't expect anything mayor from it.
+
+
 ##Future functionalities 
 
  - Theme Manager.
@@ -19,7 +26,6 @@
 > EuroEditor, Your free, easy to use, and customizable web based editor
 
 
-
 ##[EuroMetrics](https://github.com/blade1989/EuroMetrics)
 
 > A Google analytics replacement, for EuroCMS!
@@ -29,9 +35,11 @@
 
 > Part reset, part normalize. It tries to be the very best, Like no css ever was. To catch visual inconsistencies is its real test, To train it is my cause... Sorry for that.
 
+
 ##[framework.js](https://github.com/blade1989/framework.js)
 
 > The js framework for webbrowsers
+
 
 ##Howto
 
@@ -39,4 +47,3 @@
 Currently fiction:
  1. Extract in your server.
  2. Done.
-
