@@ -21,8 +21,8 @@ $users = array(
 
 $users = array(
  "imri" => "password",
- "denis" => "password",
- "mark" => "password"
+ "user" => "password",
+ "user2" => "password"
 );
 
 if(isset($_GET['logout'])) {
